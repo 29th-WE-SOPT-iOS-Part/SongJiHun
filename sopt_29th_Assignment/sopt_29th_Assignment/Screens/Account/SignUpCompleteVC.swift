@@ -41,7 +41,7 @@ class SignUpCompleteVC: UIViewController {
   
   private func setLabels(){
     if let text = userName{
-      userNameLabel.text = text
+      userNameLabel.text = text + "님"
     }
   }
   
