@@ -16,7 +16,6 @@ class LibraryVC: UIViewController,LibraryViewControllable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 }

@@ -19,20 +19,17 @@ protocol MainTabBarControllable: BaseControllable {
 
 class MainTabBarController: UITabBarController,MainTabBarControllable {
   
-  
   var onHomeScene: Scene?
   var onShortScene: Scene?
   var onWritingScene: Scene?
   var onSubscribeScene: Scene?
   var onLibraryScene: Scene?
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.setupTabBar()
     delegate = self
     NotificationCenter.default.addObserver(self, selector: #selector(selectTab(notification:)), name: .selectTab, object: nil)
-    
-    // Do any additional setup after loading the view.
   }
   
   deinit {
@@ -49,13 +46,16 @@ extension MainTabBarController {
     tabBar.backgroundImage = UIImage.color(.white)
     tabBar.backgroundColor = .white
     tabBar.tintColor = .black
-    tabBar.unselectedItemTintColor = .white
+    tabBar.unselectedItemTintColor = .gray
     
     let lineView = UIView(frame: .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1))
     lineView.backgroundColor = UIColor.gray
     self.tabBar.addSubview(lineView)
     
     setupTabBarItems()
+  }
+  
+  private func setVCs(){
   }
   
   private func setupTabBarItems() {
@@ -68,18 +68,18 @@ extension MainTabBarController {
       I18N.MainTab.library
     ]
     let images = [
-      UIImage(named: "iconGnbHomeUnselected"),
-      UIImage(named: "iconGnbLectureUnselected"),
-      UIImage(named: "iconGnbCommunityUnselected"),
-      UIImage(named: "iconGnbQAUnselected"),
-      UIImage(named: "iconGnbMypageUnselected")
+      UIImage(named: ImageName.MainTab.home_unactivated),
+      UIImage(named: ImageName.MainTab.shorts_unactivated),
+      UIImage(named: ImageName.MainTab.write_unactivated),
+      UIImage(named: ImageName.MainTab.subscribe_unactivated),
+      UIImage(named: ImageName.MainTab.library_unactivated)
     ]
     let selectedImages = [
-      UIImage(named: "iconGnbHomeSelected"),
-      UIImage(named: "iconGnbLectureSelected"),
-      UIImage(named: "iconGnbCommunitySelected"),
-      UIImage(named: "iconGnbQASelected"),
-      UIImage(named: "iconGnbMypageSelected")
+      UIImage(named: ImageName.MainTab.home_activated),
+      UIImage(named: ImageName.MainTab.shorts_activated),
+      UIImage(named: ImageName.MainTab.write_activated),
+      UIImage(named: ImageName.MainTab.subscribe_activated),
+      UIImage(named: ImageName.MainTab.library_activated)
     ]
     items.enumerated().forEach {
       self.setupTabBarItem($0.element, title: titles[$0.offset], image: images[$0.offset], selectedImage: selectedImages[$0.offset])
@@ -111,6 +111,7 @@ extension MainTabBarController {
 }
 extension MainTabBarController: UITabBarControllerDelegate {
   func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    makeVibrate()
     guard let controller = viewControllers?[selectedIndex] as? UINavigationController else { return }
     switch selectedIndex {
       case 0: onHomeScene?(controller)

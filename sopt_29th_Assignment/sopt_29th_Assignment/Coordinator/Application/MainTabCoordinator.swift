@@ -38,7 +38,13 @@ class MainTabCoordinator : BaseCoordinator, CoordinatorFinishOutput{
     }
     guard let mainTab = self.mainTabController else { return }
     mainTab.selectTab(0)
-    
+    self.startCoordinator()
+  }
+  
+  private func startCoordinator() {
+    self.childCoordinators.forEach {
+      $0.start()
+    }
   }
 }
 
@@ -48,9 +54,11 @@ extension MainTabCoordinator {
     self.mainTabController?.onHomeScene = runHomeScene()
     self.mainTabController?.onShortScene = runShortScene()
     self.mainTabController?.onWritingScene = runWritingScene()
-    self.mainTabController?.onSubscribeScene = runLibraryScene()
+    self.mainTabController?.onSubscribeScene = runSubscribeScene()
     self.mainTabController?.onLibraryScene = runLibraryScene()
-    self.router.setRootModule(self.mainTabController)
+    self.router.dismissModule(animated: false) {
+      self.router.push(self.mainTabController)
+    }
   }
 }
 
@@ -58,7 +66,8 @@ extension MainTabCoordinator {
 extension MainTabCoordinator {
   private func runHomeScene() -> Scene {
     return { [weak self] navController in
-      guard let `self` = self else { return }
+      guard let `self` = self else {
+        return }
       if navController.viewControllers.isEmpty == true {
         let coordinator = self.coordinatorFactory.makeHomeCoordinator(
           coordinatorFactory: self.coordinatorFactory,
@@ -70,6 +79,7 @@ extension MainTabCoordinator {
     }
   }
   
+
   private func runShortScene() -> Scene {
     return { [weak self] navController in
       guard let `self` = self else { return }
@@ -116,11 +126,10 @@ extension MainTabCoordinator {
     return { [weak self] navController in
       guard let `self` = self else { return }
       if navController.viewControllers.isEmpty == true {
-        var coordinator = self.coordinatorFactory.makeWritingCoordinator(
+        let coordinator = self.coordinatorFactory.makeLibraryCoordinator(
           coordinatorFactory: self.coordinatorFactory,
           moduleFactory: self.moduleFactory,
           navController: navController)
-
         self.addDependency(coordinator)
         coordinator.start()
       }

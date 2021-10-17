@@ -29,11 +29,15 @@ class LibraryCoordinator: BaseCoordinator, CoordinatorFinishOutput {
   }
   
   override func start() {
+    self.showLibraryVC()
   }
   
 }
 
 // MARK: - Show a view scene
 extension LibraryCoordinator {
-
+  private func showLibraryVC() {
+    let vc = moduleFactory.instantitateLibraryVC()
+    self.router.setRootModule(vc)
+  }
 }

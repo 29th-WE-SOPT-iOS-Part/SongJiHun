@@ -61,6 +61,8 @@
 		FDCD3A2A271C874F0072AB10 /* SubscribeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A29271C874F0072AB10 /* SubscribeCoordinator.swift */; };
 		FDCD3A2C271C87580072AB10 /* LibraryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A2B271C87580072AB10 /* LibraryCoordinator.swift */; };
 		FDCD3A2E271C8DD20072AB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A2D271C8DD20072AB10 /* SceneDelegate.swift */; };
+		FDCD3A30271CAFD60072AB10 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A2F271CAFD60072AB10 /* MainNavigationController.swift */; };
+		FDCD3A32271CB03E0072AB10 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */; };
 		FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */; };
 		FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BC270AB1BC0099F245 /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		FDCD3A29271C874F0072AB10 /* SubscribeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeCoordinator.swift; sourceTree = "<group>"; };
 		FDCD3A2B271C87580072AB10 /* LibraryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCoordinator.swift; sourceTree = "<group>"; };
 		FDCD3A2D271C8DD20072AB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FDCD3A2F271CAFD60072AB10 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		FDD7A6B5270AB1BC0099F245 /* sopt_29th_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sopt_29th_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7A6BC270AB1BC0099F245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 				FD5B937B271067E300BE2364 /* addPadding + UITextField.swift */,
 				FDCD3A11271C83DD0072AB10 /* UIImage + Extension.swift */,
 				FDCD3A13271C84B70072AB10 /* NotificationName+Extension.swift */,
+				FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			children = (
 				FDCD3A00271C78EB0072AB10 /* MainTabBarController.swift */,
 				FDCD3A21271C85750072AB10 /* MainTab.storyboard */,
+				FDCD3A2F271CAFD60072AB10 /* MainNavigationController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */,
 				FDCD39FE271C773B0072AB10 /* MainTabCoordinator.swift in Sources */,
 				FD5B93822710741B00BE2364 /* StringLiterals.swift in Sources */,
+				FDCD3A30271CAFD60072AB10 /* MainNavigationController.swift in Sources */,
 				FDCD3A2A271C874F0072AB10 /* SubscribeCoordinator.swift in Sources */,
 				FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */,
 				FDCD39EE271C58CD0072AB10 /* BaseCoordinator.swift in Sources */,
@@ -523,6 +530,7 @@
 				FD5B9362271055A100BE2364 /* Storyboards.swift in Sources */,
 				FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */,
 				FD5B937C271067E300BE2364 /* addPadding + UITextField.swift in Sources */,
+				FDCD3A32271CB03E0072AB10 /* UIColor + Extension.swift in Sources */,
 				FD5B935F2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift in Sources */,
 				FD5B935C2710516900BE2364 /* press + UIButton.swift in Sources */,
 				FDCD3A12271C83DD0072AB10 /* UIImage + Extension.swift in Sources */,

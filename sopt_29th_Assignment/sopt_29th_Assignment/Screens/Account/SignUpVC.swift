@@ -53,10 +53,14 @@ class SignUpVC: UIViewController,SignUpViewControllerable {
     super.viewDidLoad()
     setUIComponents()
     setButtonActions()
-    registerForKeyboardNotifications()
     setupGesture()
     addToolbar(textfields: [nameTextField,emailTextField,passwordTextField])
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    registerForKeyboardNotifications()
+  }
+  
   override func viewWillDisappear(_ animated: Bool) {
     unregisterForKeyboardNotifications()
   }
@@ -86,8 +90,10 @@ class SignUpVC: UIViewController,SignUpViewControllerable {
   }
   
   private func setButtonActions(){
-    signupButton.press {
-      self.onSignupComplete?(self.nameTextField.text!)
+    signupButton.press { [weak self] in
+      if let name = self?.nameTextField.text{
+        self?.onSignupComplete?(name)
+      }
     }
   }
   

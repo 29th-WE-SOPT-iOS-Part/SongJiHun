@@ -29,12 +29,16 @@ class HomeCoordinator: BaseCoordinator, CoordinatorFinishOutput {
   }
   
   override func start() {
+    self.showHomeVC()
   }
   
 }
 
 // MARK: - Show a view scene
 extension HomeCoordinator {
-
+  private func showHomeVC() {
+    let vc = moduleFactory.instantiateHomeVC()
+    self.router.setRootModule(vc)
+  }
 }
 

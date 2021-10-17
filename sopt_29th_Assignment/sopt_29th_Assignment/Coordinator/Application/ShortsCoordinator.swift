@@ -29,11 +29,15 @@ class ShortsCoordinator: BaseCoordinator, CoordinatorFinishOutput {
   }
   
   override func start() {
+    self.showShortsVC()
   }
   
 }
 
 // MARK: - Show a view scene
 extension ShortsCoordinator {
-
+  private func showShortsVC() {
+    let vc = moduleFactory.instantiateShortVC()
+    self.router.setRootModule(vc)
+  }
 }

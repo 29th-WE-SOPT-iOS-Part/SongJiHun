@@ -9,7 +9,9 @@ import UIKit
 
 protocol SignUpCompleteViewControllerable: BaseControllable {
   var onBackSignin: (() -> Void)? { get set }
+  var onBackSigninWithPop: (() -> Void)? { get set }
   var onComplete: (() -> Void)? { get set }
+  var fromSignupScene : Bool? { get set }
 }
 
 
@@ -18,7 +20,9 @@ class SignUpCompleteVC: UIViewController,SignUpCompleteViewControllerable {
   // MARK: - View Controllable
   
   var onBackSignin: (() -> Void)?
+  var onBackSigninWithPop: (() -> Void)?
   var onComplete: (() -> Void)?
+  var fromSignupScene: Bool?
   
   // MARK: - Variable Part
 
@@ -28,6 +32,7 @@ class SignUpCompleteVC: UIViewController,SignUpCompleteViewControllerable {
   
   @IBOutlet weak var userNameLabel: UILabel!
   @IBOutlet weak var okButton: CustomBlueButton!
+  @IBOutlet weak var signInOtherAccountButton: UIButton!
   
   // MARK: - Life Cycle Part
   
@@ -35,10 +40,10 @@ class SignUpCompleteVC: UIViewController,SignUpCompleteViewControllerable {
     super.viewDidLoad()
     setUIComponents()
     setLabels()
+    setButtonActions()
   }
   
-  // MARK: - IBAction Part
-  
+
   
   // MARK: - default Setting Function Part
   
@@ -50,6 +55,17 @@ class SignUpCompleteVC: UIViewController,SignUpCompleteViewControllerable {
   private func setLabels(){
     if let text = userName{
       userNameLabel.text = text + "님"
+    }
+  }
+  
+  private func setButtonActions(){
+    okButton.press { [weak self] in
+      self?.onComplete?()
+    }
+    signInOtherAccountButton.press { [weak self] in
+      if let state = self?.fromSignupScene{
+        state ? self?.onBackSigninWithPop?() : self?.onBackSignin?()
+      }
     }
   }
   

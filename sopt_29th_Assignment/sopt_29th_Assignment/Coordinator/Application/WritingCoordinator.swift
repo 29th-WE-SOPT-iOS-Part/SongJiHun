@@ -29,11 +29,15 @@ class WritingCoordinator: BaseCoordinator, CoordinatorFinishOutput {
   }
   
   override func start() {
+    self.showWritingVC()
   }
   
 }
 
 // MARK: - Show a view scene
 extension WritingCoordinator {
-
+  private func showWritingVC() {
+    let vc = moduleFactory.instantitateWritingVC()
+    self.router.setRootModule(vc)
+  }
 }

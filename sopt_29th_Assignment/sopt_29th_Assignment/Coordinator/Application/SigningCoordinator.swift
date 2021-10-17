@@ -43,7 +43,7 @@ extension SigningCoordinator {
       self?.showSignupViewController()
     }
     vc.onSigninComplete = { [weak self] userName in
-      self?.showSigninCompleteViewController(userName: userName)
+      self?.showSigninCompleteViewController(userName: userName,isFromSignup: true)
     }
     self.router.setRootModule(vc)
   }
@@ -54,37 +54,25 @@ extension SigningCoordinator {
       self?.router.popModule()
     }
     vc.onSignupComplete = { [weak self] userName in
-      self?.showSigninCompleteViewController(userName: userName)
+      self?.showSigninCompleteViewController(userName: userName,isFromSignup: true)
     }
     self.router.push(vc)
   }
   
-  private func showSigninCompleteViewController(userName : String){
+  private func showSigninCompleteViewController(userName : String,isFromSignup: Bool){
     let vc = self.moduleFactory.instantitateSignupCompleteVC(name: userName)
+    vc.onBackSigninWithPop = { [weak self] in
+      self?.router.dismissModule(animated: false, completion: {
+        self?.router.popModule(transition: nil, animated: false)
+      })
+    }
     vc.onBackSignin = { [weak self] in
       self?.router.dismissModule()
     }
     vc.onComplete = { [weak self] in
-      self?.runMainTabScene()
+      self?.finishScene?()
     }
+    vc.fromSignupScene = isFromSignup
     self.router.present(vc)
   }
-  
-  private func runMainTabScene() {
-    var coordinator = self.coordinatorFactory.makeMainTabCoordinator(
-      router: self.router,
-      coordinatorFactory: self.coordinatorFactory,
-      moduleFactory: self.moduleFactory)
-    coordinator.finishScene = { [unowned self, unowned coordinator] in
-      self.launchInstructor = LaunchInstructor.configure(Logged.wasLoggedIn)
-      self.removeDependency(coordinator)
-      self.start()
-    }
-    self.addDependency(coordinator)
-    coordinator.start()
-  }
-  
-
-  
-
 }

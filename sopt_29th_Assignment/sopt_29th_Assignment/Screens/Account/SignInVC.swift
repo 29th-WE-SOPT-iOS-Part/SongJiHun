@@ -46,9 +46,12 @@ class SignInVC: UIViewController,SignInViewControllerable {
     super.viewDidLoad()
     setUIComponents()
     setButtonActions()
-    registerForKeyboardNotifications()
     setupGesture()
     addToolbar(textfields: [nameTextField,emailTextField,passwordTextField])
+  }
+  override func viewWillAppear(_ animated: Bool) {
+    removeAllText()
+    registerForKeyboardNotifications()
   }
   
   
@@ -73,17 +76,25 @@ class SignInVC: UIViewController,SignInViewControllerable {
   }
   
   private func setButtonActions(){
-    signupButton.press {
-      self.onSignUpSelect?()
+    signupButton.press { [weak self] in
+      self?.onSignUpSelect?()
     }
     
-    loginButton.press {
-      self.onSigninComplete?(self.nameTextField.text!)
+    loginButton.press { [weak self] in
+      if let name = self?.nameTextField.text{
+        self?.onSigninComplete?(name)
+      }
     }
   }
   
   
   // MARK: - Function Part
+  
+  private func removeAllText(){
+    nameTextField.text?.removeAll()
+    emailTextField.text?.removeAll()
+    passwordTextField.text?.removeAll()
+  }
   
   
   // MARK: - @objc Function Part
@@ -149,7 +160,6 @@ extension SignInVC{
     let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
     let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
     
-    print("keybaor",keyboardSize.height)
     self.headerViewTopConstraint.constant = -100
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve)) {
       self.headerView.alpha = 0

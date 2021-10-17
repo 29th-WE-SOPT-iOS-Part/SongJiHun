@@ -29,11 +29,15 @@ class SubscribeCoordinator: BaseCoordinator, CoordinatorFinishOutput {
   }
   
   override func start() {
+    self.showSubscribeVC()
   }
   
 }
 
 // MARK: - Show a view scene
 extension SubscribeCoordinator {
-
+  private func showSubscribeVC() {
+    let vc = moduleFactory.instantitateSubscribeVC()
+    self.router.setRootModule(vc)
+  }
 }
