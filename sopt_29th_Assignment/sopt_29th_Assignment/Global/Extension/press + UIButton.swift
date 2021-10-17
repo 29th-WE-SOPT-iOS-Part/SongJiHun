@@ -24,31 +24,32 @@ extension UIButton {
   
   // iOS14부터 UIAction이 addAction가능하기에... 이전에는 NSObject형태로 등록해서 처리하는 방식으로...
   func press(for controlEvents: UIControl.Event = .touchUpInside, _ closure: @escaping()->()) {
-    self.clicked { _ in
-      if #available(iOS 14.0, *) {
-        self.addAction(UIAction { (action: UIAction) in closure() }, for: controlEvents)
-      } else {
-        @objc class ClosureSleeve: NSObject {
-          let closure:()->()
-          init(_ closure: @escaping()->()) { self.closure = closure }
-          @objc func invoke() { closure() }
-        }
-        let sleeve = ClosureSleeve(closure)
-        self.addTarget(sleeve, action: #selector(ClosureSleeve.invoke), for: controlEvents)
-        objc_setAssociatedObject(self, "\(UUID())", sleeve, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+    
+    if #available(iOS 14.0, *) {
+      self.addAction(UIAction { (action: UIAction) in closure()
+        self.clickedAnimation()
+      }, for: controlEvents)
+    } else {
+      @objc class ClosureSleeve: NSObject {
+        let closure:()->()
+        init(_ closure: @escaping()->()) { self.closure = closure }
+        @objc func invoke() { closure() }
       }
+      let sleeve = ClosureSleeve(closure)
+      self.addTarget(sleeve, action: #selector(ClosureSleeve.invoke), for: controlEvents)
+      objc_setAssociatedObject(self, "\(UUID())", sleeve, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
     }
+    
   }
   
   // 해당 함수를 통해서 Poppin 효과를 처리합니다. 줄어드는 정도를 조절하고싶다면 ,ScaleX,Y값을 조절합니다(최대값 1)
+  func clickedAnimation() {
 
-  func clicked(completion:@escaping ((Bool) -> Void)) {
     makeVibrate(degree: .medium)
     UIView.animate(withDuration: 0.1, animations: {
       self.transform = CGAffineTransform(scaleX: 0.75, y: 0.75) }, completion: { (finish: Bool) in
         UIView.animate(withDuration: 0.1, animations: {
           self.transform = CGAffineTransform.identity
-          completion(finish)
         })
       })
   }

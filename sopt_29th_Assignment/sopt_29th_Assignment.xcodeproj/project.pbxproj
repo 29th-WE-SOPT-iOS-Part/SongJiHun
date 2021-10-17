@@ -16,6 +16,19 @@
 		FD5B935F2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B935E2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift */; };
 		FD5B9362271055A100BE2364 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B9361271055A100BE2364 /* Storyboards.swift */; };
 		FD5B9365271056BE00BE2364 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B9364271056BE00BE2364 /* ModuleFactory.swift */; };
+		FD5B936927105F7A00BE2364 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B936827105F7A00BE2364 /* SignInVC.swift */; };
+		FD5B936B27105F8900BE2364 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B936A27105F8900BE2364 /* SignUpVC.swift */; };
+		FD5B936D27105F9300BE2364 /* SignUpCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B936C27105F9300BE2364 /* SignUpCompleteVC.swift */; };
+		FD5B936F2710609E00BE2364 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5B936E2710609E00BE2364 /* Account.storyboard */; };
+		FD5B9377271063A500BE2364 /* CustomInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B9376271063A500BE2364 /* CustomInputTextField.swift */; };
+		FD5B93782710670500BE2364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD7A6BE270AB1BC0099F245 /* Main.storyboard */; };
+		FD5B93792710674800BE2364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD7A6C1270AB1BE0099F245 /* Assets.xcassets */; };
+		FD5B937C271067E300BE2364 /* addPadding + UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B937B271067E300BE2364 /* addPadding + UITextField.swift */; };
+		FD5B937E27106CB500BE2364 /* CustomBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B937D27106CB500BE2364 /* CustomBlueButton.swift */; };
+		FD5B938027106DBD00BE2364 /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B937F27106DBD00BE2364 /* ColorLiterals.swift */; };
+		FD5B93822710741B00BE2364 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B93812710741B00BE2364 /* StringLiterals.swift */; };
+		FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B938427107DD000BE2364 /* ImageLiterals.swift */; };
+		FD5B93872710841B00BE2364 /* addToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B93862710841B00BE2364 /* addToolbar.swift */; };
 		FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */; };
 		FDD7A6BB270AB1BC0099F245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BA270AB1BC0099F245 /* SceneDelegate.swift */; };
 		FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BC270AB1BC0099F245 /* ViewController.swift */; };
@@ -31,6 +44,17 @@
 		FD5B935E2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "controllerFromStoryboard + UIViewController.swift"; sourceTree = "<group>"; };
 		FD5B9361271055A100BE2364 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		FD5B9364271056BE00BE2364 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		FD5B936827105F7A00BE2364 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		FD5B936A27105F8900BE2364 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		FD5B936C27105F9300BE2364 /* SignUpCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteVC.swift; sourceTree = "<group>"; };
+		FD5B936E2710609E00BE2364 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		FD5B9376271063A500BE2364 /* CustomInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputTextField.swift; sourceTree = "<group>"; };
+		FD5B937B271067E300BE2364 /* addPadding + UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "addPadding + UITextField.swift"; sourceTree = "<group>"; };
+		FD5B937D27106CB500BE2364 /* CustomBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlueButton.swift; sourceTree = "<group>"; };
+		FD5B937F27106DBD00BE2364 /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
+		FD5B93812710741B00BE2364 /* StringLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLiterals.swift; sourceTree = "<group>"; };
+		FD5B938427107DD000BE2364 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		FD5B93862710841B00BE2364 /* addToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addToolbar.swift; sourceTree = "<group>"; };
 		FDD7A6B5270AB1BC0099F245 /* sopt_29th_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sopt_29th_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7A6BA270AB1BC0099F245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +88,7 @@
 		FD5B934927104B5E00BE2364 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				FD5B93752710637E00BE2364 /* UIComponents */,
 				FD5B9363271056AF00BE2364 /* Factory */,
 				FD5B93602710559800BE2364 /* Storyboards */,
 				FD5B935D2710546800BE2364 /* Delegate */,
@@ -91,6 +116,7 @@
 				FD5B934D27104DC700BE2364 /* makeVibrate.swift */,
 				FD5B934F27104EFD00BE2364 /* applyShadow.swift */,
 				FD5B935127104F4900BE2364 /* calculateTopInset.swift */,
+				FD5B93862710841B00BE2364 /* addToolbar.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -98,6 +124,9 @@
 		FD5B934C27104DAC00BE2364 /* Literals */ = {
 			isa = PBXGroup;
 			children = (
+				FD5B937F27106DBD00BE2364 /* ColorLiterals.swift */,
+				FD5B93812710741B00BE2364 /* StringLiterals.swift */,
+				FD5B938427107DD000BE2364 /* ImageLiterals.swift */,
 			);
 			path = Literals;
 			sourceTree = "<group>";
@@ -124,6 +153,7 @@
 				FD5B93592710508D00BE2364 /* makeAlert + UIViewController.swift */,
 				FD5B935B2710516900BE2364 /* press + UIButton.swift */,
 				FD5B935E2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift */,
+				FD5B937B271067E300BE2364 /* addPadding + UITextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -143,6 +173,7 @@
 				FDD7A6BE270AB1BC0099F245 /* Main.storyboard */,
 				FDD7A6C3270AB1BE0099F245 /* LaunchScreen.storyboard */,
 				FD5B9361271055A100BE2364 /* Storyboards.swift */,
+				FD5B936E2710609E00BE2364 /* Account.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -158,8 +189,20 @@
 		FD5B93662710586200BE2364 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				FD5B936827105F7A00BE2364 /* SignInVC.swift */,
+				FD5B936A27105F8900BE2364 /* SignUpVC.swift */,
+				FD5B936C27105F9300BE2364 /* SignUpCompleteVC.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		FD5B93752710637E00BE2364 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FD5B9376271063A500BE2364 /* CustomInputTextField.swift */,
+				FD5B937D27106CB500BE2364 /* CustomBlueButton.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		FDD7A6AC270AB1BC0099F245 = {
@@ -246,6 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5B936F2710609E00BE2364 /* Account.storyboard in Resources */,
+				FD5B93792710674800BE2364 /* Assets.xcassets in Resources */,
+				FD5B93782710670500BE2364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,17 +302,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5B936D27105F9300BE2364 /* SignUpCompleteVC.swift in Sources */,
+				FD5B936B27105F8900BE2364 /* SignUpVC.swift in Sources */,
 				FD5B93582710501F00BE2364 /* getClassName + UIViewController.swift in Sources */,
 				FD5B935027104EFD00BE2364 /* applyShadow.swift in Sources */,
+				FD5B937E27106CB500BE2364 /* CustomBlueButton.swift in Sources */,
+				FD5B938027106DBD00BE2364 /* ColorLiterals.swift in Sources */,
+				FD5B93822710741B00BE2364 /* StringLiterals.swift in Sources */,
+				FD5B9377271063A500BE2364 /* CustomInputTextField.swift in Sources */,
 				FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */,
 				FD5B935227104F4900BE2364 /* calculateTopInset.swift in Sources */,
 				FD5B9365271056BE00BE2364 /* ModuleFactory.swift in Sources */,
+				FD5B936927105F7A00BE2364 /* SignInVC.swift in Sources */,
 				FD5B9362271055A100BE2364 /* Storyboards.swift in Sources */,
 				FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */,
+				FD5B937C271067E300BE2364 /* addPadding + UITextField.swift in Sources */,
 				FD5B935F2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift in Sources */,
 				FDD7A6BB270AB1BC0099F245 /* SceneDelegate.swift in Sources */,
 				FD5B935C2710516900BE2364 /* press + UIButton.swift in Sources */,
 				FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */,
+				FD5B93872710841B00BE2364 /* addToolbar.swift in Sources */,
+				FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */,
 				FD5B935A2710508D00BE2364 /* makeAlert + UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -18,5 +18,6 @@ import Foundation
 
 enum Storyboards: String {
   case main = "Main"
+  case account = "Account"
 
 }
