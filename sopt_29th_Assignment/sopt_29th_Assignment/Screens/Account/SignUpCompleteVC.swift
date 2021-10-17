@@ -7,19 +7,27 @@
 
 import UIKit
 
-class SignUpCompleteVC: UIViewController {
+protocol SignUpCompleteViewControllerable: BaseControllable {
+  var onBackSignin: (() -> Void)? { get set }
+  var onComplete: (() -> Void)? { get set }
+}
+
+
+class SignUpCompleteVC: UIViewController,SignUpCompleteViewControllerable {
+  
+  // MARK: - View Controllable
+  
+  var onBackSignin: (() -> Void)?
+  var onComplete: (() -> Void)?
+  
   // MARK: - Variable Part
-  
+
   var userName : String?
-  
   
   // MARK: - UI Component Part
   
   @IBOutlet weak var userNameLabel: UILabel!
   @IBOutlet weak var okButton: CustomBlueButton!
-  
-  // MARK: - Constraint Part
-  
   
   // MARK: - Life Cycle Part
   

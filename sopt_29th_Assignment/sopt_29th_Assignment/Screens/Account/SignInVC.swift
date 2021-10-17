@@ -7,7 +7,17 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+protocol SignInViewControllerable: BaseControllable {
+  var onSignUpSelect: (() -> Void)? { get set }
+  var onSigninComplete: ((String) -> Void)? { get set }
+}
+
+class SignInVC: UIViewController,SignInViewControllerable {
+  
+  // MARK: - View Controllable
+  var onSignUpSelect: (() -> Void)?
+  var onSigninComplete: ((String) -> Void)?
+  
   // MARK: - Variable Part
   
   private let factory : ModuleFactoryProtocol = ModuleFactory.resolve()
@@ -39,8 +49,9 @@ class SignInVC: UIViewController {
     registerForKeyboardNotifications()
     setupGesture()
     addToolbar(textfields: [nameTextField,emailTextField,passwordTextField])
-
   }
+  
+  
   override func viewWillDisappear(_ animated: Bool) {
     unregisterForKeyboardNotifications()
   }
@@ -63,13 +74,11 @@ class SignInVC: UIViewController {
   
   private func setButtonActions(){
     signupButton.press {
-      let vc = self.factory.instantiateSignupVC()
-      self.navigationController?.pushViewController(vc, animated: true)
+      self.onSignUpSelect?()
     }
     
     loginButton.press {
-      let vc = self.factory.instantitateSignupCompleteVC(name: self.nameTextField.text!)
-      self.present(vc, animated: true, completion: nil)
+      self.onSigninComplete?(self.nameTextField.text!)
     }
   }
   

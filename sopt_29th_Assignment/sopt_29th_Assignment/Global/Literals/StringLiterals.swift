@@ -21,4 +21,12 @@ struct I18N{
     static let enterEmailPlaceHolder = "이메일 또는 휴대전화"
     static let enterPasswordPlaceHolder = "비밀번호 입력"
   }
+  
+  struct MainTab{
+    static let home = "홈"
+    static let shorts = "Shorts"
+    static let add = "추가"
+    static let subscribe = "구독"
+    static let library = "보관함"
+  }
 }
