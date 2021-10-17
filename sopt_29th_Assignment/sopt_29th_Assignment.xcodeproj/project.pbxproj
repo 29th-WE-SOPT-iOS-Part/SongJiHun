@@ -29,6 +29,17 @@
 		FD5B93822710741B00BE2364 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B93812710741B00BE2364 /* StringLiterals.swift */; };
 		FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B938427107DD000BE2364 /* ImageLiterals.swift */; };
 		FD5B93872710841B00BE2364 /* addToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B93862710841B00BE2364 /* addToolbar.swift */; };
+		FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39DF271C50490072AB10 /* Presentable.swift */; };
+		FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */; };
+		FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E3271C507A0072AB10 /* BaseControllable.swift */; };
+		FDCD39E6271C50870072AB10 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E5271C50870072AB10 /* Coordinator.swift */; };
+		FDCD39E9271C50C30072AB10 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E8271C50C30072AB10 /* Router.swift */; };
+		FDCD39EB271C543D0072AB10 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39EA271C543D0072AB10 /* CoordinatorFactory.swift */; };
+		FDCD39EE271C58CD0072AB10 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39ED271C58CD0072AB10 /* BaseCoordinator.swift */; };
+		FDCD39F1271C5D980072AB10 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39F0271C5D980072AB10 /* ApplicationCoordinator.swift */; };
+		FDCD39F4271C5DF60072AB10 /* LaunchInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39F3271C5DF60072AB10 /* LaunchInstructor.swift */; };
+		FDCD39F6271C5F740072AB10 /* Logged.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39F5271C5F740072AB10 /* Logged.swift */; };
+		FDCD39FA271C63A30072AB10 /* SigningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39F9271C63A30072AB10 /* SigningCoordinator.swift */; };
 		FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */; };
 		FDD7A6BB270AB1BC0099F245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BA270AB1BC0099F245 /* SceneDelegate.swift */; };
 		FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BC270AB1BC0099F245 /* ViewController.swift */; };
@@ -55,6 +66,17 @@
 		FD5B93812710741B00BE2364 /* StringLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLiterals.swift; sourceTree = "<group>"; };
 		FD5B938427107DD000BE2364 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		FD5B93862710841B00BE2364 /* addToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addToolbar.swift; sourceTree = "<group>"; };
+		FDCD39DF271C50490072AB10 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
+		FDCD39E3271C507A0072AB10 /* BaseControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllable.swift; sourceTree = "<group>"; };
+		FDCD39E5271C50870072AB10 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FDCD39E8271C50C30072AB10 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FDCD39EA271C543D0072AB10 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		FDCD39ED271C58CD0072AB10 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		FDCD39F0271C5D980072AB10 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FDCD39F3271C5DF60072AB10 /* LaunchInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInstructor.swift; sourceTree = "<group>"; };
+		FDCD39F5271C5F740072AB10 /* Logged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logged.swift; sourceTree = "<group>"; };
+		FDCD39F9271C63A30072AB10 /* SigningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningCoordinator.swift; sourceTree = "<group>"; };
 		FDD7A6B5270AB1BC0099F245 /* sopt_29th_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sopt_29th_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7A6BA270AB1BC0099F245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				FD5B93752710637E00BE2364 /* UIComponents */,
-				FD5B9363271056AF00BE2364 /* Factory */,
 				FD5B93602710559800BE2364 /* Storyboards */,
 				FD5B935D2710546800BE2364 /* Delegate */,
 				FD5B93562710501000BE2364 /* Extension */,
@@ -117,6 +138,7 @@
 				FD5B934F27104EFD00BE2364 /* applyShadow.swift */,
 				FD5B935127104F4900BE2364 /* calculateTopInset.swift */,
 				FD5B93862710841B00BE2364 /* addToolbar.swift */,
+				FDCD39F5271C5F740072AB10 /* Logged.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -182,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5B9364271056BE00BE2364 /* ModuleFactory.swift */,
+				FDCD39EA271C543D0072AB10 /* CoordinatorFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -205,6 +228,63 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		FDCD39DD271C4E7B0072AB10 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39F2271C5DEB0072AB10 /* Enum */,
+				FDCD39EF271C5D860072AB10 /* Application */,
+				FDCD39EC271C58C00072AB10 /* Base */,
+				FD5B9363271056AF00BE2364 /* Factory */,
+				FDCD39E7271C50A70072AB10 /* Router */,
+				FDCD39DE271C4E8A0072AB10 /* Protocols */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FDCD39DE271C4E8A0072AB10 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39DF271C50490072AB10 /* Presentable.swift */,
+				FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */,
+				FDCD39E3271C507A0072AB10 /* BaseControllable.swift */,
+				FDCD39E5271C50870072AB10 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FDCD39E7271C50A70072AB10 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39E8271C50C30072AB10 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FDCD39EC271C58C00072AB10 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39ED271C58CD0072AB10 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FDCD39EF271C5D860072AB10 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39F0271C5D980072AB10 /* ApplicationCoordinator.swift */,
+				FDCD39F9271C63A30072AB10 /* SigningCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FDCD39F2271C5DEB0072AB10 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				FDCD39F3271C5DF60072AB10 /* LaunchInstructor.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		FDD7A6AC270AB1BC0099F245 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +304,7 @@
 		FDD7A6B7270AB1BC0099F245 /* sopt_29th_Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				FDCD39DD271C4E7B0072AB10 /* Coordinator */,
 				FD5B934927104B5E00BE2364 /* Global */,
 				FD5B934827104B3700BE2364 /* Screens */,
 			);
@@ -304,11 +385,18 @@
 			files = (
 				FD5B936D27105F9300BE2364 /* SignUpCompleteVC.swift in Sources */,
 				FD5B936B27105F8900BE2364 /* SignUpVC.swift in Sources */,
+				FDCD39E6271C50870072AB10 /* Coordinator.swift in Sources */,
 				FD5B93582710501F00BE2364 /* getClassName + UIViewController.swift in Sources */,
+				FDCD39F4271C5DF60072AB10 /* LaunchInstructor.swift in Sources */,
+				FDCD39E9271C50C30072AB10 /* Router.swift in Sources */,
+				FDCD39F1271C5D980072AB10 /* ApplicationCoordinator.swift in Sources */,
 				FD5B935027104EFD00BE2364 /* applyShadow.swift in Sources */,
 				FD5B937E27106CB500BE2364 /* CustomBlueButton.swift in Sources */,
 				FD5B938027106DBD00BE2364 /* ColorLiterals.swift in Sources */,
+				FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */,
 				FD5B93822710741B00BE2364 /* StringLiterals.swift in Sources */,
+				FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */,
+				FDCD39EE271C58CD0072AB10 /* BaseCoordinator.swift in Sources */,
 				FD5B9377271063A500BE2364 /* CustomInputTextField.swift in Sources */,
 				FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */,
 				FD5B935227104F4900BE2364 /* calculateTopInset.swift in Sources */,
@@ -320,8 +408,12 @@
 				FD5B935F2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift in Sources */,
 				FDD7A6BB270AB1BC0099F245 /* SceneDelegate.swift in Sources */,
 				FD5B935C2710516900BE2364 /* press + UIButton.swift in Sources */,
+				FDCD39F6271C5F740072AB10 /* Logged.swift in Sources */,
+				FDCD39FA271C63A30072AB10 /* SigningCoordinator.swift in Sources */,
 				FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */,
+				FDCD39EB271C543D0072AB10 /* CoordinatorFactory.swift in Sources */,
 				FD5B93872710841B00BE2364 /* addToolbar.swift in Sources */,
+				FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */,
 				FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */,
 				FD5B935A2710508D00BE2364 /* makeAlert + UIViewController.swift in Sources */,
 			);

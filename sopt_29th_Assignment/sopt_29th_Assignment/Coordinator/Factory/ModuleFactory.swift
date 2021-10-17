@@ -30,9 +30,9 @@ import UIKit
 protocol ModuleFactoryProtocol {
   func instantiateSignupVC() -> SignUpVC
   func instantitateSignupCompleteVC(name : String) -> SignUpCompleteVC
+  
 
 }
-
 
 class ModuleFactory : ModuleFactoryProtocol{
 
@@ -46,6 +46,7 @@ class ModuleFactory : ModuleFactoryProtocol{
 
 // MARK: Account Scene
 extension ModuleFactory {
+  
   func instantiateSignupVC() -> SignUpVC {
     return SignUpVC.controllerFromStoryboard(.account)
   }
@@ -55,4 +56,5 @@ extension ModuleFactory {
     vc.userName = name
     return vc
   }
+  
 }

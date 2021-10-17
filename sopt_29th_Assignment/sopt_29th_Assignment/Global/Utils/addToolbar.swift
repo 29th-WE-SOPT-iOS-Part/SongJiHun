@@ -18,11 +18,17 @@ extension UIViewController{
     toolBarKeyboard.items = [flexSpace,btnDoneBar]
     for (_,item) in textfields.enumerated(){
       item.inputAccessoryView = toolBarKeyboard
+
     }
   }
   
   @objc func dismissKeyBoard(){
     self.view.endEditing(true)
+  }
+  
+  public func addTapGesture(){
+    let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
+    self.view.addGestureRecognizer(tap)
   }
   
 }
