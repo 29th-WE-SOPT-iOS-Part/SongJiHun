@@ -27,5 +27,18 @@ struct ImageLiterals{
     static let library_activated = UIImage(named :"LibraryIconFill")!
     static let library_unactivated = UIImage(named :"LibraryIcon")!
   }
+  
+  struct Header{
+    static let main_logo = UIImage(named: "ic_main_logo")!
+    static let air_play = UIImage(named: "ic_airplay")!
+    static let alarm = UIImage(named: "ic_alarm")!
+    static let search = UIImage(named: "ic_search")!
+    static let userIcon = UIImage(named: "ic_sopt")!
+  }
+  
+  struct Subscribe{
+    static let thumbnail = UIImage(named: "wesoptiOSPart")!
+    static let userIcon = UIImage(named: "ic_sopt")!
+  }
 
 }
