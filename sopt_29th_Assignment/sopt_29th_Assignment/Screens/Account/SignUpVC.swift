@@ -98,11 +98,9 @@ class SignUpVC: UIViewController,SignUpViewControllerable {
   }
   
   private func setCheckboxStateImage(){
-    let imageName = isPasswordVisible ? ImageName.Components.checkBox_activated :
-    ImageName.Components.checkBox_unactivated
-    if let img = UIImage(named: imageName){
-      checkIconImageView.image = img
-    }
+    checkIconImageView.image = isPasswordVisible ?
+    ImageLiterals.Components.checkBox_activated :
+    ImageLiterals.Components.checkBox_unactivated
   }
   
 

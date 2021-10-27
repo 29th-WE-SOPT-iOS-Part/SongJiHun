@@ -68,18 +68,18 @@ extension MainTabBarController {
       I18N.MainTab.library
     ]
     let images = [
-      UIImage(named: ImageName.MainTab.home_unactivated),
-      UIImage(named: ImageName.MainTab.shorts_unactivated),
-      UIImage(named: ImageName.MainTab.write_unactivated),
-      UIImage(named: ImageName.MainTab.subscribe_unactivated),
-      UIImage(named: ImageName.MainTab.library_unactivated)
+      ImageLiterals.MainTab.home_unactivated,
+       ImageLiterals.MainTab.shorts_unactivated,
+      ImageLiterals.MainTab.write_unactivated,
+      ImageLiterals.MainTab.subscribe_unactivated,
+      ImageLiterals.MainTab.library_unactivated
     ]
     let selectedImages = [
-      UIImage(named: ImageName.MainTab.home_activated),
-      UIImage(named: ImageName.MainTab.shorts_activated),
-      UIImage(named: ImageName.MainTab.write_activated),
-      UIImage(named: ImageName.MainTab.subscribe_activated),
-      UIImage(named: ImageName.MainTab.library_activated)
+      ImageLiterals.MainTab.home_activated,
+      ImageLiterals.MainTab.shorts_activated,
+      ImageLiterals.MainTab.write_activated,
+      ImageLiterals.MainTab.subscribe_activated,
+      ImageLiterals.MainTab.library_activated
     ]
     items.enumerated().forEach {
       self.setupTabBarItem($0.element, title: titles[$0.offset], image: images[$0.offset], selectedImage: selectedImages[$0.offset])

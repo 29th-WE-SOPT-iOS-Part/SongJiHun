@@ -14,7 +14,7 @@ class ApplicationCoordinator: BaseCoordinator {
   private let coordinatorFactory: CoordinatorFactoryProtocol
   private let moduleFactory: ModuleFactoryProtocol
   private var launchInstructor = LaunchInstructor.configure()
-  private var wasLoggedIn: Bool = false
+  private var wasLoggedIn: Bool = true
 
   // MARK: - Init
   init(
