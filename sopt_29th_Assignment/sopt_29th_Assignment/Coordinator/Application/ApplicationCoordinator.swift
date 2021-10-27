@@ -14,6 +14,7 @@ class ApplicationCoordinator: BaseCoordinator {
   private let coordinatorFactory: CoordinatorFactoryProtocol
   private let moduleFactory: ModuleFactoryProtocol
   private var launchInstructor = LaunchInstructor.configure()
+  private var wasLoggedIn: Bool = true
 
   // MARK: - Init
   init(
@@ -28,7 +29,6 @@ class ApplicationCoordinator: BaseCoordinator {
   
   // MARK: - Coordinator
   override func start() {
-
     if self.childCoordinators
         .contains(where: { type(of: $0.self) == MainTabCoordinator.self }) {
       self.childCoordinators
@@ -37,12 +37,7 @@ class ApplicationCoordinator: BaseCoordinator {
           $0.start()
         }
     } else {
-      switch self.launchInstructor {
-        case .auth:
-          self.runSigningScene()
-        case .main:
-          self.runMainTabScene()
-      }
+      wasLoggedIn ? runMainTabScene() : runSigningScene()
     }
   }
 }
@@ -53,7 +48,6 @@ class ApplicationCoordinator: BaseCoordinator {
 
 // MARK: - Run scenes
 extension ApplicationCoordinator {
-
   private func runSigningScene() {
     var coordinator = self.coordinatorFactory.makeSigningCoordinator(
       router: self.router,
@@ -61,6 +55,7 @@ extension ApplicationCoordinator {
       moduleFactory: self.moduleFactory)
     coordinator.finishScene = { [unowned self, unowned coordinator] in
       self.launchInstructor = LaunchInstructor.configure(Logged.wasLoggedIn)
+      self.wasLoggedIn = true
       self.removeDependency(coordinator)
       self.start()
     }

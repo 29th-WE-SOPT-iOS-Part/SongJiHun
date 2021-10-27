@@ -7,7 +7,17 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+protocol SignInViewControllerable: BaseControllable {
+  var onSignUpSelect: (() -> Void)? { get set }
+  var onSigninComplete: ((String) -> Void)? { get set }
+}
+
+class SignInVC: UIViewController,SignInViewControllerable {
+  
+  // MARK: - View Controllable
+  var onSignUpSelect: (() -> Void)?
+  var onSigninComplete: ((String) -> Void)?
+  
   // MARK: - Variable Part
   
   private let factory : ModuleFactoryProtocol = ModuleFactory.resolve()
@@ -36,11 +46,15 @@ class SignInVC: UIViewController {
     super.viewDidLoad()
     setUIComponents()
     setButtonActions()
-    registerForKeyboardNotifications()
     setupGesture()
     addToolbar(textfields: [nameTextField,emailTextField,passwordTextField])
-
   }
+  override func viewWillAppear(_ animated: Bool) {
+    removeAllText()
+    registerForKeyboardNotifications()
+  }
+  
+  
   override func viewWillDisappear(_ animated: Bool) {
     unregisterForKeyboardNotifications()
   }
@@ -62,19 +76,25 @@ class SignInVC: UIViewController {
   }
   
   private func setButtonActions(){
-    signupButton.press {
-      let vc = self.factory.instantiateSignupVC()
-      self.navigationController?.pushViewController(vc, animated: true)
+    signupButton.press { [weak self] in
+      self?.onSignUpSelect?()
     }
     
-    loginButton.press {
-      let vc = self.factory.instantitateSignupCompleteVC(name: self.nameTextField.text!)
-      self.present(vc, animated: true, completion: nil)
+    loginButton.press { [weak self] in
+      if let name = self?.nameTextField.text{
+        self?.onSigninComplete?(name)
+      }
     }
   }
   
   
   // MARK: - Function Part
+  
+  private func removeAllText(){
+    nameTextField.text?.removeAll()
+    emailTextField.text?.removeAll()
+    passwordTextField.text?.removeAll()
+  }
   
   
   // MARK: - @objc Function Part
@@ -140,7 +160,6 @@ extension SignInVC{
     let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
     let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
     
-    print("keybaor",keyboardSize.height)
     self.headerViewTopConstraint.constant = -100
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve)) {
       self.headerView.alpha = 0

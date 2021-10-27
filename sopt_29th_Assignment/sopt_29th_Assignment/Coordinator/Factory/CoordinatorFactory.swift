@@ -96,7 +96,7 @@ class CoordinatorFactory: CoordinatorFactoryProtocol {
     moduleFactory: ModuleFactoryProtocol,
     navController: UINavigationController
   ) -> Coordinator & CoordinatorFinishOutput {
-    return ClassCoordinator(
+    return ShortsCoordinator(
       router: self.router(navController),
       coordinatorFactory: coordinatorFactory,
       moduleFactory: moduleFactory
@@ -108,7 +108,7 @@ class CoordinatorFactory: CoordinatorFactoryProtocol {
     moduleFactory: ModuleFactoryProtocol,
     navController: UINavigationController
   ) -> Coordinator & CoordinatorFinishOutput {
-    return CommunityCoordinator(
+    return WritingCoordinator(
       router: self.router(navController),
       coordinatorFactory: coordinatorFactory,
       moduleFactory: moduleFactory
@@ -120,7 +120,7 @@ class CoordinatorFactory: CoordinatorFactoryProtocol {
     moduleFactory: ModuleFactoryProtocol,
     navController: UINavigationController
   ) -> Coordinator & CoordinatorFinishOutput {
-    return QnACoordinator(
+    return SubscribeCoordinator(
       router: self.router(navController),
       coordinatorFactory: coordinatorFactory,
       moduleFactory: moduleFactory
@@ -132,7 +132,7 @@ class CoordinatorFactory: CoordinatorFactoryProtocol {
     moduleFactory: ModuleFactoryProtocol,
     navController: UINavigationController
   ) -> Coordinator & CoordinatorFinishOutput {
-    return MyPageCoordinator(
+    return LibraryCoordinator(
       router: self.router(navController),
       coordinatorFactory: coordinatorFactory,
       moduleFactory: moduleFactory

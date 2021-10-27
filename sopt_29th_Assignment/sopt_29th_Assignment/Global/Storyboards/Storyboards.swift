@@ -19,5 +19,10 @@ import Foundation
 enum Storyboards: String {
   case main = "Main"
   case account = "Account"
-
+  case mainTab = "MainTab"
+  case home = "Home"
+  case shorts = "Shorts"
+  case writing = "Writing"
+  case subscribe = "Subscribe"
+  case library = "Library"
 }

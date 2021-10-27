@@ -199,7 +199,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcH-0f-qGa" customClass="하지만">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcH-0f-qGa">
                                         <rect key="frame" x="34" y="193.5" width="76.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -317,14 +317,27 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7F-4y-kbV">
+                                <rect key="frame" x="136.5" y="545.5" width="141" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="TYG-MT-hDO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다른 계정으로 로그인하기">
+                                    <color key="titleColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Amb-GY-dtv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1Cm-ZG-1vY" firstAttribute="centerX" secondItem="iYJ-1C-S9S" secondAttribute="centerX" id="0IF-qn-wb0"/>
                             <constraint firstItem="1Cm-ZG-1vY" firstAttribute="centerY" secondItem="iYJ-1C-S9S" secondAttribute="centerY" constant="-180" id="1f4-TP-zsZ"/>
+                            <constraint firstItem="w7F-4y-kbV" firstAttribute="top" secondItem="VAo-3B-dbY" secondAttribute="bottom" constant="23" id="Asd-Z2-EuD"/>
                             <constraint firstItem="VAo-3B-dbY" firstAttribute="top" secondItem="wDR-vx-KcS" secondAttribute="bottom" constant="60" id="Dn4-LQ-amK"/>
                             <constraint firstItem="1Cm-ZG-1vY" firstAttribute="width" secondItem="iYJ-1C-S9S" secondAttribute="width" multiplier="150/375" id="EJc-BP-duQ"/>
+                            <constraint firstItem="w7F-4y-kbV" firstAttribute="centerX" secondItem="iYJ-1C-S9S" secondAttribute="centerX" id="UkY-cD-ZYN"/>
                             <constraint firstItem="VAo-3B-dbY" firstAttribute="leading" secondItem="Amb-GY-dtv" secondAttribute="leading" constant="40" id="dmp-hH-xU6"/>
                             <constraint firstItem="CPN-Ta-SQe" firstAttribute="centerX" secondItem="iYJ-1C-S9S" secondAttribute="centerX" id="fZx-kx-Mll"/>
                             <constraint firstItem="Amb-GY-dtv" firstAttribute="trailing" secondItem="VAo-3B-dbY" secondAttribute="trailing" constant="40" id="g8K-f5-3fb"/>
@@ -335,6 +348,7 @@
                     </view>
                     <connections>
                         <outlet property="okButton" destination="VAo-3B-dbY" id="UHR-Y0-Xfa"/>
+                        <outlet property="signInOtherAccountButton" destination="w7F-4y-kbV" id="9bK-Ue-wt8"/>
                         <outlet property="userNameLabel" destination="CPN-Ta-SQe" id="62j-PJ-rDh"/>
                     </connections>
                 </viewController>
@@ -345,6 +359,7 @@
         <!--Navigation Controller-->
         <scene sceneID="c7d-7F-wGg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJD-Uw-Ncp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vDg-8e-Ebw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -356,7 +371,6 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="h8Q-Pj-mVm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mJD-Uw-Ncp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </scene>

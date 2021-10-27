@@ -1,9 +1,11 @@
 //
-//  Logged.swift
+//  Logged + UserDefulats.swift
 //  sopt_29th_Assignment
 //
 //  Created by 송지훈 on 2021/10/17.
 //
+
+import Foundation
 
 import Foundation
 
@@ -52,3 +54,4 @@ struct UserDefaultOptional<T> {
     set { self.storage.set(newValue, forKey: self.key.rawValue) }
   }
 }
+

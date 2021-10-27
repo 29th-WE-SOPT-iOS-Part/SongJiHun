@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="woF-um-hVv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="S8W-3S-7h8">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="woF-um-hVv" customClass="MainTabBarController" customModule="sopt_29th_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uov-xn-bvM"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="JUQ-Ow-hm1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="42b-4A-CB2" kind="relationship" relationship="viewControllers" id="vKo-I3-6Kv"/>
+                        <segue destination="Ka8-Ud-2BM" kind="relationship" relationship="viewControllers" id="Xbw-Bs-pug"/>
+                        <segue destination="k90-cV-Nfu" kind="relationship" relationship="viewControllers" id="w87-Wy-lGM"/>
+                        <segue destination="ckD-CU-Lgl" kind="relationship" relationship="viewControllers" id="Mgk-Bk-kzv"/>
+                        <segue destination="Y3F-E1-EjW" kind="relationship" relationship="viewControllers" id="fZc-SH-mCa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K26-Lr-cZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3429" y="-28"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="KXT-FF-S07">
+            <objects>
+                <navigationController id="Ka8-Ud-2BM" customClass="MainNavigationController" customModule="sopt_29th_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GU7-ml-9Xf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gt4-Jm-yXQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzs-AC-9Z1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4035" y="986"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Nqg-mf-xl2">
+            <objects>
+                <navigationController id="Y3F-E1-EjW" customClass="MainNavigationController" customModule="sopt_29th_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wh4-uO-2lA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Hx-GC-hT0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfZ-1d-AxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1072" y="986"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="l4t-JP-4sw">
+            <objects>
+                <navigationController id="42b-4A-CB2" customClass="MainNavigationController" customModule="sopt_29th_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="CXf-Zo-kex"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3PK-fH-evN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1y-xO-wNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5093" y="987"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="QBF-fq-FaR">
+            <objects>
+                <navigationController id="k90-cV-Nfu" customClass="MainNavigationController" customModule="sopt_29th_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6nD-Tg-tgH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QAI-SG-add">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGg-ad-6XH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3119" y="986"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="EVm-h7-uMv">
+            <objects>
+                <navigationController id="ckD-CU-Lgl" customClass="MainNavigationController" customModule="sopt_29th_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="nbL-Ar-hoC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6iT-Vk-iqN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEG-Vu-aWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2048" y="986"/>
+        </scene>
+    </scenes>
+</document>

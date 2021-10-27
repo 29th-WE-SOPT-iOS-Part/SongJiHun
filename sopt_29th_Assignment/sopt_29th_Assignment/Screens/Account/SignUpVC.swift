@@ -7,7 +7,18 @@
 
 import UIKit
 
-class SignUpVC: UIViewController {
+protocol SignUpViewControllerable: BaseControllable {
+  var onBack: (() -> Void)? { get set }
+  var onSignupComplete: ((String) -> Void)? { get set }
+}
+
+class SignUpVC: UIViewController,SignUpViewControllerable {
+  
+  // MARK: - View Controllable
+  var onBack: (() -> Void)?
+  var onSignupComplete: ((String) -> Void)?
+  
+  
   // MARK: - Variable Part
   
   private let factory : ModuleFactoryProtocol = ModuleFactory.resolve()
@@ -42,10 +53,14 @@ class SignUpVC: UIViewController {
     super.viewDidLoad()
     setUIComponents()
     setButtonActions()
-    registerForKeyboardNotifications()
     setupGesture()
     addToolbar(textfields: [nameTextField,emailTextField,passwordTextField])
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    registerForKeyboardNotifications()
+  }
+  
   override func viewWillDisappear(_ animated: Bool) {
     unregisterForKeyboardNotifications()
   }
@@ -53,7 +68,7 @@ class SignUpVC: UIViewController {
   // MARK: - IBAction Part
   
   @IBAction func backButtonClicked(_ sender: Any) {
-    self.navigationController?.popViewController(animated: true)
+    self.onBack?()
   }
   
   @IBAction func showPasswordButtonClicked(_ sender: Any) {
@@ -75,18 +90,17 @@ class SignUpVC: UIViewController {
   }
   
   private func setButtonActions(){
-    signupButton.press {
-      let vc = self.factory.instantitateSignupCompleteVC(name: self.nameTextField.text!)
-      self.present(vc, animated: true, completion: nil)
+    signupButton.press { [weak self] in
+      if let name = self?.nameTextField.text{
+        self?.onSignupComplete?(name)
+      }
     }
   }
   
   private func setCheckboxStateImage(){
-    let imageName = isPasswordVisible ? ImageName.Components.checkBox_activated :
-    ImageName.Components.checkBox_unactivated
-    if let img = UIImage(named: imageName){
-      checkIconImageView.image = img
-    }
+    checkIconImageView.image = isPasswordVisible ?
+    ImageLiterals.Components.checkBox_activated :
+    ImageLiterals.Components.checkBox_unactivated
   }
   
 

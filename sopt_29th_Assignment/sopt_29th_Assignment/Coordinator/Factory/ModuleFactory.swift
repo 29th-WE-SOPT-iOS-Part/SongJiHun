@@ -28,15 +28,23 @@ import UIKit
 */
 
 protocol ModuleFactoryProtocol {
-  func instantiateSignupVC() -> SignUpVC
-  func instantitateSignupCompleteVC(name : String) -> SignUpCompleteVC
+  func instantitaeSigninVC() -> SignInViewControllerable
+  func instantiateSignupVC() -> SignUpViewControllerable
+  func instantitateSignupCompleteVC(name : String) -> SignUpCompleteViewControllerable
   
-
+  func instantiateMainTabBarController() -> MainTabBarControllable
+  
+  func instantiateHomeVC() -> HomeViewControllable
+  func instantiateShortVC() -> ShortsViewControllable
+  func instantitateWritingVC() -> WritingViewControllable
+  func instantitateSubscribeVC() -> SubscribeViewControllable
+  func instantitateLibraryVC() -> LibraryViewControllable
+  
 }
 
 class ModuleFactory : ModuleFactoryProtocol{
 
-  
+
   static func resolve() -> ModuleFactory {
     return ModuleFactory()
   }
@@ -47,13 +55,47 @@ class ModuleFactory : ModuleFactoryProtocol{
 // MARK: Account Scene
 extension ModuleFactory {
   
-  func instantiateSignupVC() -> SignUpVC {
+  func instantitaeSigninVC() -> SignInViewControllerable{
+    return SignInVC.controllerFromStoryboard(.account)
+  }
+  
+  func instantiateSignupVC() -> SignUpViewControllerable {
     return SignUpVC.controllerFromStoryboard(.account)
   }
   
-  func instantitateSignupCompleteVC(name : String) -> SignUpCompleteVC {
+  func instantitateSignupCompleteVC(name : String) -> SignUpCompleteViewControllerable {
     let vc = SignUpCompleteVC.controllerFromStoryboard(.account)
     vc.userName = name
+    return vc
+  }
+  
+  func instantiateMainTabBarController() -> MainTabBarControllable {
+    let tabbar = MainTabBarController.controllerFromStoryboard(.mainTab)
+    return tabbar
+  }
+  
+  func instantiateHomeVC() -> HomeViewControllable {
+    let vc = HomeVC.controllerFromStoryboard(.home)
+    return vc
+  }
+  
+  func instantiateShortVC() -> ShortsViewControllable {
+    let vc = ShortsVC.controllerFromStoryboard(.shorts)
+    return vc
+  }
+  
+  func instantitateWritingVC() -> WritingViewControllable {
+    let vc = WritingVC.controllerFromStoryboard(.writing)
+    return vc
+  }
+  
+  func instantitateSubscribeVC() -> SubscribeViewControllable {
+    let vc = SubscribeVC.controllerFromStoryboard(.subscribe)
+    return vc
+  }
+  
+  func instantitateLibraryVC() -> LibraryViewControllable {
+    let vc = LibraryVC.controllerFromStoryboard(.library)
     return vc
   }
   
