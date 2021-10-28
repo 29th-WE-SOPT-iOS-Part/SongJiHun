@@ -12,12 +12,15 @@
 ***
 
 ![2차 세미나](https://user-images.githubusercontent.com/60260284/136587020-fd46204d-513e-4bc1-b2ae-d13ca2b4f03e.png)
+[2차 과제 리드미(공사중)](https://flaxen-warlock-70e.notion.site/2-e5e1f35a4f96469da8938902c15df831)
 
 <br>
 
 ***
 
 ![3차 세미나](https://user-images.githubusercontent.com/60260284/136587023-215e4a1c-eca8-4344-974e-445f6c6ac5a8.png)
+[3차 과제 리드미📚](https://flaxen-warlock-70e.notion.site/3-1ca04df73212420ca6ec26855d548602)
+
 
 <br>
 
