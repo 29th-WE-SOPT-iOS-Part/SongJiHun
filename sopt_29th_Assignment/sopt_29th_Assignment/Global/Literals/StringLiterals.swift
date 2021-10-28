@@ -38,6 +38,7 @@ struct I18N{
       static let continueToWatch = "이어서 시청하기"
       static let noWatch = "시청하지 않음"
       static let live = "실시간"
+      static let article = "게시물"
     }
   }
 }

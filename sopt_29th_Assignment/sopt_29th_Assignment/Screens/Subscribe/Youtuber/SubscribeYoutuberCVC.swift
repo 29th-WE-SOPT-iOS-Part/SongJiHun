@@ -7,7 +7,16 @@
 
 import UIKit
 
-class SubscribeYoutuberCVC: UICollectionViewCell {
+class SubscribeYoutuberCVC: UICollectionViewCell,UICollectionViewRegisterable {
+
+  static var isFromNib : Bool{
+    get{
+      return true
+    }
+  }
+  
+
+  
   
   @IBOutlet weak var profileImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!

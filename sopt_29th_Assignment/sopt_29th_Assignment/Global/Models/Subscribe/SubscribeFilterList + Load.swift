@@ -25,7 +25,9 @@ extension SubscribeDataModel{
       SubscribeDataModel.Filter(sortCase: I18N.Subscribe.Filter.noWatch,
                                 idx: 3),
       SubscribeDataModel.Filter(sortCase: I18N.Subscribe.Filter.live,
-                                idx: 4)
-    ]
+                                idx: 4),
+      SubscribeDataModel.Filter(sortCase: I18N.Subscribe.Filter.article,
+                                idx: 5)
+    ].sorted(by: {$0.idx < $1.idx})
   }
 }

@@ -9,4 +9,14 @@ import UIKit
 
 class MainHeaderView : UIView{
   
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    addSubviewFromNib(view: self)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    addSubviewFromNib(view: self)
+  }
+  
 }

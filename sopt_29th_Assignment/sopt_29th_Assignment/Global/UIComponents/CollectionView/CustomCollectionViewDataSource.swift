@@ -7,28 +7,26 @@
 
 import UIKit
 
+public struct CollectionViewLayout{
+  var itemSize : CGSize
+  var interItemSpacing : CGFloat
+  var lineSpacing : CGFloat
+  var cellInset : UIEdgeInsets
+}
+
 public class CustomCollectionViewListDataSource<T>: NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate,
                                                 UICollectionViewDelegateFlowLayout{
   let items: [T]
   let cellFactory: (T) -> UICollectionViewCell
-  let itemSize : CGSize
-  let interItemSpacing : CGFloat
-  let lineSpacing : CGFloat
-  let cellInset : UIEdgeInsets
-  public var onItemSelected: (T) -> Void = { _ in }
+  let sizeFactory: (T) -> CollectionViewLayout
+  public var onItemSelected: (T,IndexPath) -> Void = { (_,index) in }
   
   public init(items: [T],
-              itemSize : CGSize,
-              interItemSpacing : CGFloat,
-              lineSpacing : CGFloat,
-              cellInset : UIEdgeInsets,
+              cellSizeFactory : @escaping (T) -> CollectionViewLayout,
               cellFactory: @escaping (T) -> UICollectionViewCell) {
     self.items = items
-    self.itemSize = itemSize
-    self.interItemSpacing = interItemSpacing
-    self.lineSpacing = lineSpacing
-    self.cellInset = cellInset
+    self.sizeFactory = cellSizeFactory
     self.cellFactory = cellFactory
   }
   
@@ -53,25 +51,25 @@ public class CustomCollectionViewListDataSource<T>: NSObject, UICollectionViewDa
   // MARK: UICollectionViewDelegate
   
   public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    self.onItemSelected(item(at: indexPath))
+    self.onItemSelected(item(at: indexPath), indexPath)
   }
   
   
   // MARK: UICollectionViewDelegateFlowLayout
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return self.itemSize
+    return sizeFactory(item(at: indexPath)).itemSize
   }
   
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return self.cellInset
+    return sizeFactory(item(at: IndexPath(row: 0, section: section))).cellInset
   }
   
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return self.interItemSpacing
+    return sizeFactory(item(at: IndexPath(row: 0, section: section))).interItemSpacing
   }
   
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return self.lineSpacing
+    return sizeFactory(item(at: IndexPath(row: 0, section: section))).lineSpacing
   }
 }
 

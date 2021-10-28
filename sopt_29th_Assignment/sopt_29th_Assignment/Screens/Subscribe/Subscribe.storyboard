@@ -21,13 +21,43 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWA-hb-QS3" customClass="MainHeaderView" customModule="sopt_29th_Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xgJ-le-juh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc2-rr-37e" customClass="SubscribeYoutuberContainerView" customModule="sopt_29th_Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="104"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="PJE-3G-Mdz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICR-bc-TcT" customClass="SubscribeFilterContainerView" customModule="sopt_29th_Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="192" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dfT-so-Y0D"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.4907634909060562" green="1" blue="0.89317830485280625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ICR-bc-TcT" secondAttribute="trailing" id="01n-a5-eQx"/>
                             <constraint firstAttribute="bottom" secondItem="jzn-yt-bEj" secondAttribute="bottom" id="0oW-aX-hzG"/>
                             <constraint firstItem="jzn-yt-bEj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="66d-C7-jeJ"/>
+                            <constraint firstItem="kc2-rr-37e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8BH-xY-gPH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wWA-hb-QS3" secondAttribute="trailing" id="Pe6-cf-rgv"/>
+                            <constraint firstItem="wWA-hb-QS3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TTv-oI-tmW"/>
+                            <constraint firstItem="ICR-bc-TcT" firstAttribute="top" secondItem="kc2-rr-37e" secondAttribute="bottom" id="Ztt-EE-ZjW"/>
                             <constraint firstItem="jzn-yt-bEj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ccG-rJ-JbG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kc2-rr-37e" secondAttribute="trailing" id="cfP-fd-zr5"/>
+                            <constraint firstItem="wWA-hb-QS3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jep-Qf-Pcq"/>
+                            <constraint firstItem="kc2-rr-37e" firstAttribute="top" secondItem="wWA-hb-QS3" secondAttribute="bottom" id="piH-VF-rKU"/>
+                            <constraint firstItem="ICR-bc-TcT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vdt-Mc-wfX"/>
                             <constraint firstItem="jzn-yt-bEj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ysQ-wJ-7sC"/>
                         </constraints>
                     </view>

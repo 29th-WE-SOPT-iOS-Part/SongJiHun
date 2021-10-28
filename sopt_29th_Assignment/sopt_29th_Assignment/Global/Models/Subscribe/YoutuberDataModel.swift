@@ -18,11 +18,11 @@ extension SubscribeDataModel{
     static func loadDummyList() -> [SubscribeDataModel.Youtuber]{
       return [
         Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju1, name: "iOSPart", idx: 0),
-        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju1, name: "AndroidPart", idx: 1),
-        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju1, name: "ServerPart", idx: 2),
-        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju1, name: "WebPart", idx: 3),
-        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju1, name: "DesignPart", idx: 4),
-        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju1, name: "PlanPart", idx: 5)
+        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju2, name: "AndroidPart", idx: 1),
+        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju3, name: "ServerPart", idx: 2),
+        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju4, name: "WebPart", idx: 3),
+        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju5, name: "DesignPart", idx: 4),
+        Youtuber(thumbnailImage: ImageLiterals.Subscribe.Youtuber.ggamju6, name: "PlanPart", idx: 5)
       ].sorted(by: { $0.idx < $1.idx })
     }
   }

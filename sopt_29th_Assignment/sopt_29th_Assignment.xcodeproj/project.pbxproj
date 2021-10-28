@@ -40,13 +40,19 @@
 		FD9D459B272A8DF9006C108F /* SubscribeVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D4599272A8DF9006C108F /* SubscribeVideoTVC.swift */; };
 		FD9D459C272A8DF9006C108F /* SubscribeVideoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D459A272A8DF9006C108F /* SubscribeVideoTVC.xib */; };
 		FD9D45A0272A97C0006C108F /* calculateDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D459F272A97C0006C108F /* calculateDate.swift */; };
-		FD9D45A3272AA508006C108F /* UITableViewRegistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45A2272AA508006C108F /* UITableViewRegistable.swift */; };
+		FD9D45A3272AA508006C108F /* UITableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45A2272AA508006C108F /* UITableViewRegisterable.swift */; };
 		FD9D45A8272AAC24006C108F /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45A7272AAC24006C108F /* MainHeaderView.xib */; };
 		FD9D45AA272AAC2D006C108F /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45A9272AAC2D006C108F /* MainHeaderView.swift */; };
 		FD9D45AC272AAE8B006C108F /* SubscribeYoutuberContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45AB272AAE8B006C108F /* SubscribeYoutuberContainerView.xib */; };
 		FD9D45AE272AAEB6006C108F /* SubscribeYoutuberContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45AD272AAEB6006C108F /* SubscribeYoutuberContainerView.swift */; };
 		FD9D45B5272AAFA1006C108F /* SubscribeYoutuberCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45B3272AAFA1006C108F /* SubscribeYoutuberCVC.swift */; };
 		FD9D45B6272AAFA1006C108F /* SubscribeYoutuberCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45B4272AAFA1006C108F /* SubscribeYoutuberCVC.xib */; };
+		FD9D45B8272AB73F006C108F /* addSubViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45B7272AB73F006C108F /* addSubViewFromNib.swift */; };
+		FD9D45BA272AB925006C108F /* UICollectionViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45B9272AB925006C108F /* UICollectionViewRegisterable.swift */; };
+		FD9D45BC272ABDD5006C108F /* SubscribeFilterContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45BB272ABDD5006C108F /* SubscribeFilterContainerView.swift */; };
+		FD9D45BE272ABDE5006C108F /* SubscribeFilterContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45BD272ABDE5006C108F /* SubscribeFilterContainerView.xib */; };
+		FD9D45C1272ABE51006C108F /* SubscribeFilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45BF272ABE51006C108F /* SubscribeFilterCVC.swift */; };
+		FD9D45C2272ABE51006C108F /* SubscribeFilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45C0272ABE51006C108F /* SubscribeFilterCVC.xib */; };
 		FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39DF271C50490072AB10 /* Presentable.swift */; };
 		FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */; };
 		FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E3271C507A0072AB10 /* BaseControllable.swift */; };
@@ -118,13 +124,19 @@
 		FD9D4599272A8DF9006C108F /* SubscribeVideoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeVideoTVC.swift; sourceTree = "<group>"; };
 		FD9D459A272A8DF9006C108F /* SubscribeVideoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeVideoTVC.xib; sourceTree = "<group>"; };
 		FD9D459F272A97C0006C108F /* calculateDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateDate.swift; sourceTree = "<group>"; };
-		FD9D45A2272AA508006C108F /* UITableViewRegistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistable.swift; sourceTree = "<group>"; };
+		FD9D45A2272AA508006C108F /* UITableViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegisterable.swift; sourceTree = "<group>"; };
 		FD9D45A7272AAC24006C108F /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
 		FD9D45A9272AAC2D006C108F /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		FD9D45AB272AAE8B006C108F /* SubscribeYoutuberContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeYoutuberContainerView.xib; sourceTree = "<group>"; };
 		FD9D45AD272AAEB6006C108F /* SubscribeYoutuberContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYoutuberContainerView.swift; sourceTree = "<group>"; };
 		FD9D45B3272AAFA1006C108F /* SubscribeYoutuberCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYoutuberCVC.swift; sourceTree = "<group>"; };
 		FD9D45B4272AAFA1006C108F /* SubscribeYoutuberCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeYoutuberCVC.xib; sourceTree = "<group>"; };
+		FD9D45B7272AB73F006C108F /* addSubViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSubViewFromNib.swift; sourceTree = "<group>"; };
+		FD9D45B9272AB925006C108F /* UICollectionViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRegisterable.swift; sourceTree = "<group>"; };
+		FD9D45BB272ABDD5006C108F /* SubscribeFilterContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeFilterContainerView.swift; sourceTree = "<group>"; };
+		FD9D45BD272ABDE5006C108F /* SubscribeFilterContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeFilterContainerView.xib; sourceTree = "<group>"; };
+		FD9D45BF272ABE51006C108F /* SubscribeFilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeFilterCVC.swift; sourceTree = "<group>"; };
+		FD9D45C0272ABE51006C108F /* SubscribeFilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeFilterCVC.xib; sourceTree = "<group>"; };
 		FDCD39DF271C50490072AB10 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
 		FDCD39E3271C507A0072AB10 /* BaseControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllable.swift; sourceTree = "<group>"; };
@@ -280,6 +292,7 @@
 				FDCD3A11271C83DD0072AB10 /* UIImage + Extension.swift */,
 				FDCD3A13271C84B70072AB10 /* NotificationName+Extension.swift */,
 				FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */,
+				FD9D45B7272AB73F006C108F /* addSubViewFromNib.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -382,6 +395,10 @@
 		FD9D459D272A9202006C108F /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D45BB272ABDD5006C108F /* SubscribeFilterContainerView.swift */,
+				FD9D45BD272ABDE5006C108F /* SubscribeFilterContainerView.xib */,
+				FD9D45BF272ABE51006C108F /* SubscribeFilterCVC.swift */,
+				FD9D45C0272ABE51006C108F /* SubscribeFilterCVC.xib */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -400,7 +417,8 @@
 		FD9D45A1272AA4F1006C108F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				FD9D45A2272AA508006C108F /* UITableViewRegistable.swift */,
+				FD9D45A2272AA508006C108F /* UITableViewRegisterable.swift */,
+				FD9D45B9272AB925006C108F /* UICollectionViewRegisterable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -634,7 +652,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5B936F2710609E00BE2364 /* Account.storyboard in Resources */,
+				FD9D45C2272ABE51006C108F /* SubscribeFilterCVC.xib in Resources */,
 				FDCD3A18271C851A0072AB10 /* Writing.storyboard in Resources */,
+				FD9D45BE272ABDE5006C108F /* SubscribeFilterContainerView.xib in Resources */,
 				FD9D459C272A8DF9006C108F /* SubscribeVideoTVC.xib in Resources */,
 				FD5B93792710674800BE2364 /* Assets.xcassets in Resources */,
 				FDCD3A1A271C852B0072AB10 /* Shorts.storyboard in Resources */,
@@ -703,8 +723,10 @@
 				FDCD3A2C271C87580072AB10 /* LibraryCoordinator.swift in Sources */,
 				FDCD39E6271C50870072AB10 /* Coordinator.swift in Sources */,
 				FD5B93582710501F00BE2364 /* getClassName + UIViewController.swift in Sources */,
+				FD9D45C1272ABE51006C108F /* SubscribeFilterCVC.swift in Sources */,
 				FDCD39F4271C5DF60072AB10 /* LaunchInstructor.swift in Sources */,
 				FDCD39E9271C50C30072AB10 /* Router.swift in Sources */,
+				FD9D45BA272AB925006C108F /* UICollectionViewRegisterable.swift in Sources */,
 				FDCD39F1271C5D980072AB10 /* ApplicationCoordinator.swift in Sources */,
 				FD5B935027104EFD00BE2364 /* applyShadow.swift in Sources */,
 				FDCD3A14271C84B70072AB10 /* NotificationName+Extension.swift in Sources */,
@@ -727,6 +749,7 @@
 				FD9D45B5272AAFA1006C108F /* SubscribeYoutuberCVC.swift in Sources */,
 				FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */,
 				FDCD3A01271C78EB0072AB10 /* MainTabBarController.swift in Sources */,
+				FD9D45B8272AB73F006C108F /* addSubViewFromNib.swift in Sources */,
 				FDCD3A0C271C7C390072AB10 /* WritingVC.swift in Sources */,
 				FDCD3A0E271C7C430072AB10 /* SubscribeVC.swift in Sources */,
 				FD5B935227104F4900BE2364 /* calculateTopInset.swift in Sources */,
@@ -749,7 +772,8 @@
 				FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */,
 				FDCD3A2E271C8DD20072AB10 /* SceneDelegate.swift in Sources */,
 				FD9D458D272A6455006C108F /* VideoDataModel.swift in Sources */,
-				FD9D45A3272AA508006C108F /* UITableViewRegistable.swift in Sources */,
+				FD9D45BC272ABDD5006C108F /* SubscribeFilterContainerView.swift in Sources */,
+				FD9D45A3272AA508006C108F /* UITableViewRegisterable.swift in Sources */,
 				FD9D45AE272AAEB6006C108F /* SubscribeYoutuberContainerView.swift in Sources */,
 				FDCD39EB271C543D0072AB10 /* CoordinatorFactory.swift in Sources */,
 				FD9D4587272A5F69006C108F /* SubscribeDataModel.swift in Sources */,
