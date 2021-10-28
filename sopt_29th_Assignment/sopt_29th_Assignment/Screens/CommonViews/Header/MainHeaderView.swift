@@ -9,6 +9,7 @@ import UIKit
 
 class MainHeaderView : UIView{
   
+  @IBOutlet var mainIconList: [UIView]!
   override init(frame: CGRect) {
     super.init(frame: frame)
     addSubviewFromNib(view: self)

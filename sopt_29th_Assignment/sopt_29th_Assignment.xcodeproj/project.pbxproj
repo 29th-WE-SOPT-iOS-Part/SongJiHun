@@ -53,6 +53,7 @@
 		FD9D45BE272ABDE5006C108F /* SubscribeFilterContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45BD272ABDE5006C108F /* SubscribeFilterContainerView.xib */; };
 		FD9D45C1272ABE51006C108F /* SubscribeFilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45BF272ABE51006C108F /* SubscribeFilterCVC.swift */; };
 		FD9D45C2272ABE51006C108F /* SubscribeFilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45C0272ABE51006C108F /* SubscribeFilterCVC.xib */; };
+		FD9D45C4272AC726006C108F /* SubscribeVC + UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45C3272AC726006C108F /* SubscribeVC + UIScrollViewDelegate.swift */; };
 		FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39DF271C50490072AB10 /* Presentable.swift */; };
 		FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */; };
 		FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E3271C507A0072AB10 /* BaseControllable.swift */; };
@@ -137,6 +138,7 @@
 		FD9D45BD272ABDE5006C108F /* SubscribeFilterContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeFilterContainerView.xib; sourceTree = "<group>"; };
 		FD9D45BF272ABE51006C108F /* SubscribeFilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeFilterCVC.swift; sourceTree = "<group>"; };
 		FD9D45C0272ABE51006C108F /* SubscribeFilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeFilterCVC.xib; sourceTree = "<group>"; };
+		FD9D45C3272AC726006C108F /* SubscribeVC + UIScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubscribeVC + UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		FDCD39DF271C50490072AB10 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
 		FDCD39E3271C507A0072AB10 /* BaseControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllable.swift; sourceTree = "<group>"; };
@@ -548,6 +550,7 @@
 				FD9D459D272A9202006C108F /* Filter */,
 				FD9D4598272A8DD5006C108F /* Video */,
 				FDCD3A0D271C7C430072AB10 /* SubscribeVC.swift */,
+				FD9D45C3272AC726006C108F /* SubscribeVC + UIScrollViewDelegate.swift */,
 				FDCD3A1B271C85370072AB10 /* Subscribe.storyboard */,
 			);
 			path = Subscribe;
@@ -751,6 +754,7 @@
 				FDCD3A01271C78EB0072AB10 /* MainTabBarController.swift in Sources */,
 				FD9D45B8272AB73F006C108F /* addSubViewFromNib.swift in Sources */,
 				FDCD3A0C271C7C390072AB10 /* WritingVC.swift in Sources */,
+				FD9D45C4272AC726006C108F /* SubscribeVC + UIScrollViewDelegate.swift in Sources */,
 				FDCD3A0E271C7C430072AB10 /* SubscribeVC.swift in Sources */,
 				FD5B935227104F4900BE2364 /* calculateTopInset.swift in Sources */,
 				FD5B9365271056BE00BE2364 /* ModuleFactory.swift in Sources */,

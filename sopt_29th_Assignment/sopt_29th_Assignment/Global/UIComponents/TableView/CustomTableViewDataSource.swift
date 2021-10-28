@@ -11,6 +11,8 @@ public class CustomTableViewListDataSource<T>: NSObject, UITableViewDataSource, 
   let items: [T]
   let cellFactory: (T) -> UITableViewCell
   public var onItemSelected: (T,IndexPath) -> Void = { _,index in }
+  public var scrollViewDidScroll: (CGPoint) -> Void = { cor in }
+  public var scrollViewWillBeginScroll: (CGPoint) -> Void = { cor in }
 
   public init(items: [T], cellFactory: @escaping (T) -> UITableViewCell) {
     self.items = items
@@ -38,4 +40,17 @@ public class CustomTableViewListDataSource<T>: NSObject, UITableViewDataSource, 
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.onItemSelected(item(at: indexPath), indexPath)
   }
+  
+  // MARK: UITableViewDelegate
+
+  
+  public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    self.scrollViewDidScroll(scrollView.contentOffset)
+  }
+  
+  public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    self.scrollViewWillBeginScroll(scrollView.contentOffset)
+  }
+  
+  
 }
