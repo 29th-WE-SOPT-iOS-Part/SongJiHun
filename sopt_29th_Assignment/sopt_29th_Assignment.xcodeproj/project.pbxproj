@@ -36,6 +36,17 @@
 		FD9D458D272A6455006C108F /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D458C272A6455006C108F /* VideoDataModel.swift */; };
 		FD9D4590272A6F91006C108F /* CustomTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D458F272A6F91006C108F /* CustomTableViewDataSource.swift */; };
 		FD9D4593272A74AF006C108F /* CustomCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D4592272A74AF006C108F /* CustomCollectionViewDataSource.swift */; };
+		FD9D4595272A820F006C108F /* CustomTableViewSectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D4594272A820F006C108F /* CustomTableViewSectionDataSource.swift */; };
+		FD9D459B272A8DF9006C108F /* SubscribeVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D4599272A8DF9006C108F /* SubscribeVideoTVC.swift */; };
+		FD9D459C272A8DF9006C108F /* SubscribeVideoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D459A272A8DF9006C108F /* SubscribeVideoTVC.xib */; };
+		FD9D45A0272A97C0006C108F /* calculateDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D459F272A97C0006C108F /* calculateDate.swift */; };
+		FD9D45A3272AA508006C108F /* UITableViewRegistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45A2272AA508006C108F /* UITableViewRegistable.swift */; };
+		FD9D45A8272AAC24006C108F /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45A7272AAC24006C108F /* MainHeaderView.xib */; };
+		FD9D45AA272AAC2D006C108F /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45A9272AAC2D006C108F /* MainHeaderView.swift */; };
+		FD9D45AC272AAE8B006C108F /* SubscribeYoutuberContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45AB272AAE8B006C108F /* SubscribeYoutuberContainerView.xib */; };
+		FD9D45AE272AAEB6006C108F /* SubscribeYoutuberContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45AD272AAEB6006C108F /* SubscribeYoutuberContainerView.swift */; };
+		FD9D45B5272AAFA1006C108F /* SubscribeYoutuberCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D45B3272AAFA1006C108F /* SubscribeYoutuberCVC.swift */; };
+		FD9D45B6272AAFA1006C108F /* SubscribeYoutuberCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9D45B4272AAFA1006C108F /* SubscribeYoutuberCVC.xib */; };
 		FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39DF271C50490072AB10 /* Presentable.swift */; };
 		FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */; };
 		FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E3271C507A0072AB10 /* BaseControllable.swift */; };
@@ -103,6 +114,17 @@
 		FD9D458C272A6455006C108F /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
 		FD9D458F272A6F91006C108F /* CustomTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewDataSource.swift; sourceTree = "<group>"; };
 		FD9D4592272A74AF006C108F /* CustomCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		FD9D4594272A820F006C108F /* CustomTableViewSectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewSectionDataSource.swift; sourceTree = "<group>"; };
+		FD9D4599272A8DF9006C108F /* SubscribeVideoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeVideoTVC.swift; sourceTree = "<group>"; };
+		FD9D459A272A8DF9006C108F /* SubscribeVideoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeVideoTVC.xib; sourceTree = "<group>"; };
+		FD9D459F272A97C0006C108F /* calculateDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateDate.swift; sourceTree = "<group>"; };
+		FD9D45A2272AA508006C108F /* UITableViewRegistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistable.swift; sourceTree = "<group>"; };
+		FD9D45A7272AAC24006C108F /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
+		FD9D45A9272AAC2D006C108F /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
+		FD9D45AB272AAE8B006C108F /* SubscribeYoutuberContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeYoutuberContainerView.xib; sourceTree = "<group>"; };
+		FD9D45AD272AAEB6006C108F /* SubscribeYoutuberContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYoutuberContainerView.swift; sourceTree = "<group>"; };
+		FD9D45B3272AAFA1006C108F /* SubscribeYoutuberCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeYoutuberCVC.swift; sourceTree = "<group>"; };
+		FD9D45B4272AAFA1006C108F /* SubscribeYoutuberCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeYoutuberCVC.xib; sourceTree = "<group>"; };
 		FDCD39DF271C50490072AB10 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
 		FDCD39E3271C507A0072AB10 /* BaseControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllable.swift; sourceTree = "<group>"; };
@@ -176,19 +198,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FD081E772729E214001C8FAA /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				FD9D4591272A74A0006C108F /* CollectionView */,
-				FD9D458E272A6F35006C108F /* TableView */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		FD5B934827104B3700BE2364 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FD081E772729E214001C8FAA /* Common */,
+				FD9D45A5272AABF0006C108F /* CommonViews */,
 				FDCD3A06271C7C130072AB10 /* Library */,
 				FDCD3A05271C7C0C0072AB10 /* Subscribe */,
 				FDCD3A04271C7BFE0072AB10 /* Writing */,
@@ -204,6 +217,7 @@
 		FD5B934927104B5E00BE2364 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D45A1272AA4F1006C108F /* Protocols */,
 				FD9D4581272A5E60006C108F /* Models */,
 				FD5B93752710637E00BE2364 /* UIComponents */,
 				FD5B93602710559800BE2364 /* Storyboards */,
@@ -232,6 +246,7 @@
 				FD5B935127104F4900BE2364 /* calculateTopInset.swift */,
 				FD5B93862710841B00BE2364 /* addToolbar.swift */,
 				FDCD39FB271C6B260072AB10 /* Logged + UserDefaults.swift */,
+				FD9D459F272A97C0006C108F /* calculateDate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +326,8 @@
 		FD5B93752710637E00BE2364 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D4591272A74A0006C108F /* CollectionView */,
+				FD9D458E272A6F35006C108F /* TableView */,
 				FD5B9376271063A500BE2364 /* CustomInputTextField.swift */,
 				FD5B937D27106CB500BE2364 /* CustomBlueButton.swift */,
 			);
@@ -340,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				FD9D458F272A6F91006C108F /* CustomTableViewDataSource.swift */,
+				FD9D4594272A820F006C108F /* CustomTableViewSectionDataSource.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -350,6 +368,58 @@
 				FD9D4592272A74AF006C108F /* CustomCollectionViewDataSource.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		FD9D4598272A8DD5006C108F /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D4599272A8DF9006C108F /* SubscribeVideoTVC.swift */,
+				FD9D459A272A8DF9006C108F /* SubscribeVideoTVC.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		FD9D459D272A9202006C108F /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		FD9D459E272A9206006C108F /* Youtuber */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D45AB272AAE8B006C108F /* SubscribeYoutuberContainerView.xib */,
+				FD9D45AD272AAEB6006C108F /* SubscribeYoutuberContainerView.swift */,
+				FD9D45B3272AAFA1006C108F /* SubscribeYoutuberCVC.swift */,
+				FD9D45B4272AAFA1006C108F /* SubscribeYoutuberCVC.xib */,
+			);
+			path = Youtuber;
+			sourceTree = "<group>";
+		};
+		FD9D45A1272AA4F1006C108F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D45A2272AA508006C108F /* UITableViewRegistable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FD9D45A5272AABF0006C108F /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D45A6272AABFE006C108F /* Header */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		FD9D45A6272AABFE006C108F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D45A7272AAC24006C108F /* MainHeaderView.xib */,
+				FD9D45A9272AAC2D006C108F /* MainHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		FDCD39DD271C4E7B0072AB10 /* Coordinator */ = {
@@ -456,6 +526,9 @@
 		FDCD3A05271C7C0C0072AB10 /* Subscribe */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D459E272A9206006C108F /* Youtuber */,
+				FD9D459D272A9202006C108F /* Filter */,
+				FD9D4598272A8DD5006C108F /* Video */,
 				FDCD3A0D271C7C430072AB10 /* SubscribeVC.swift */,
 				FDCD3A1B271C85370072AB10 /* Subscribe.storyboard */,
 			);
@@ -562,13 +635,17 @@
 			files = (
 				FD5B936F2710609E00BE2364 /* Account.storyboard in Resources */,
 				FDCD3A18271C851A0072AB10 /* Writing.storyboard in Resources */,
+				FD9D459C272A8DF9006C108F /* SubscribeVideoTVC.xib in Resources */,
 				FD5B93792710674800BE2364 /* Assets.xcassets in Resources */,
 				FDCD3A1A271C852B0072AB10 /* Shorts.storyboard in Resources */,
 				FD5B93782710670500BE2364 /* Main.storyboard in Resources */,
+				FD9D45A8272AAC24006C108F /* MainHeaderView.xib in Resources */,
 				FDCD3A1C271C85370072AB10 /* Subscribe.storyboard in Resources */,
 				FDCD3A1E271C85450072AB10 /* Library.storyboard in Resources */,
 				FDCD3A22271C85750072AB10 /* MainTab.storyboard in Resources */,
+				FD9D45AC272AAE8B006C108F /* SubscribeYoutuberContainerView.xib in Resources */,
 				FDCD3A16271C850B0072AB10 /* Home.storyboard in Resources */,
+				FD9D45B6272AAFA1006C108F /* SubscribeYoutuberCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,12 +716,15 @@
 				FD5B938027106DBD00BE2364 /* ColorLiterals.swift in Sources */,
 				FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */,
 				FDCD39FE271C773B0072AB10 /* MainTabCoordinator.swift in Sources */,
+				FD9D459B272A8DF9006C108F /* SubscribeVideoTVC.swift in Sources */,
 				FD5B93822710741B00BE2364 /* StringLiterals.swift in Sources */,
 				FDCD3A30271CAFD60072AB10 /* MainNavigationController.swift in Sources */,
 				FDCD3A2A271C874F0072AB10 /* SubscribeCoordinator.swift in Sources */,
 				FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */,
 				FDCD39EE271C58CD0072AB10 /* BaseCoordinator.swift in Sources */,
+				FD9D4595272A820F006C108F /* CustomTableViewSectionDataSource.swift in Sources */,
 				FD5B9377271063A500BE2364 /* CustomInputTextField.swift in Sources */,
+				FD9D45B5272AAFA1006C108F /* SubscribeYoutuberCVC.swift in Sources */,
 				FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */,
 				FDCD3A01271C78EB0072AB10 /* MainTabBarController.swift in Sources */,
 				FDCD3A0C271C7C390072AB10 /* WritingVC.swift in Sources */,
@@ -659,6 +739,7 @@
 				FD5B9362271055A100BE2364 /* Storyboards.swift in Sources */,
 				FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */,
 				FD9D4589272A5F78006C108F /* YoutuberDataModel.swift in Sources */,
+				FD9D45AA272AAC2D006C108F /* MainHeaderView.swift in Sources */,
 				FD5B937C271067E300BE2364 /* addPadding + UITextField.swift in Sources */,
 				FDCD3A32271CB03E0072AB10 /* UIColor + Extension.swift in Sources */,
 				FD5B935F2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift in Sources */,
@@ -668,9 +749,12 @@
 				FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */,
 				FDCD3A2E271C8DD20072AB10 /* SceneDelegate.swift in Sources */,
 				FD9D458D272A6455006C108F /* VideoDataModel.swift in Sources */,
+				FD9D45A3272AA508006C108F /* UITableViewRegistable.swift in Sources */,
+				FD9D45AE272AAEB6006C108F /* SubscribeYoutuberContainerView.swift in Sources */,
 				FDCD39EB271C543D0072AB10 /* CoordinatorFactory.swift in Sources */,
 				FD9D4587272A5F69006C108F /* SubscribeDataModel.swift in Sources */,
 				FD5B93872710841B00BE2364 /* addToolbar.swift in Sources */,
+				FD9D45A0272A97C0006C108F /* calculateDate.swift in Sources */,
 				FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */,
 				FDCD3A28271C873C0072AB10 /* WritingCoordinator.swift in Sources */,
 				FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */,

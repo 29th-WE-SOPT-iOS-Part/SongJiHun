@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,24 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnM-v4-687">
-                                <rect key="frame" x="168.5" y="437.5" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzn-yt-bEj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.4907634909060562" green="1" blue="0.89317830485280625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VnM-v4-687" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="NgW-9c-r1l"/>
-                            <constraint firstItem="VnM-v4-687" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rAS-zh-6cc"/>
+                            <constraint firstAttribute="bottom" secondItem="jzn-yt-bEj" secondAttribute="bottom" id="0oW-aX-hzG"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="66d-C7-jeJ"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ccG-rJ-JbG"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ysQ-wJ-7sC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoTV" destination="jzn-yt-bEj" id="ZSI-Fh-ETw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

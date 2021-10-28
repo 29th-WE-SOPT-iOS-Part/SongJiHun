@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class CustomCollectionViewDataSource<T>: NSObject, UICollectionViewDataSource,
+public class CustomCollectionViewListDataSource<T>: NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate,
                                                 UICollectionViewDelegateFlowLayout{
   let items: [T]
@@ -67,11 +67,11 @@ public class CustomCollectionViewDataSource<T>: NSObject, UICollectionViewDataSo
   }
   
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return self.lineSpacing
+    return self.interItemSpacing
   }
   
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return self.interItemSpacing
+    return self.lineSpacing
   }
 }
 

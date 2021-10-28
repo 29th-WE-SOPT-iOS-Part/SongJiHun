@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubscribeYoutuberCVC" customModule="sopt_29th_Assignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="183" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ggamju1" translatesAutoresizingMaskIntoConstraints="NO" id="rjB-RQ-jid">
+                        <rect key="frame" x="7" y="14" width="169" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="58" id="MoM-RP-ROl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK6-v0-sJ8">
+                        <rect key="frame" x="7" y="77" width="169" height="14.5"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                        <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="IK6-v0-sJ8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="79i-Tg-p05"/>
+                <constraint firstAttribute="trailing" secondItem="IK6-v0-sJ8" secondAttribute="trailing" constant="7" id="HqP-XO-Sef"/>
+                <constraint firstAttribute="trailing" secondItem="rjB-RQ-jid" secondAttribute="trailing" constant="7" id="k4l-FD-Cvs"/>
+                <constraint firstItem="rjB-RQ-jid" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="qi8-U3-AlA"/>
+                <constraint firstItem="IK6-v0-sJ8" firstAttribute="top" secondItem="rjB-RQ-jid" secondAttribute="bottom" constant="5" id="yQz-vZ-yYA"/>
+                <constraint firstItem="rjB-RQ-jid" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="yfr-77-Qdq"/>
+            </constraints>
+            <size key="customSize" width="183" height="112"/>
+            <connections>
+                <outlet property="nameLabel" destination="IK6-v0-sJ8" id="MK3-Nw-GSo"/>
+                <outlet property="profileImageView" destination="rjB-RQ-jid" id="O7I-hs-ehw"/>
+            </connections>
+            <point key="canvasLocation" x="228.2608695652174" y="125.22321428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ggamju1" width="58" height="58"/>
+    </resources>
+</document>

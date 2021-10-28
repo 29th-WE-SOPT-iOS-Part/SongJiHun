@@ -26,7 +26,7 @@ extension SubscribeDataModel{
               title: "1차 iOS 세미나 : iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면전환",
               url: "https://www.youtube.com/",
               viewCount: 423,
-              time: "2021-09-04",
+              time: "2021-09-02 12:00:13",
               youtuber: SOPT),
         
         Video(thumbnailImage: ImageLiterals.Subscribe.Video.thumbnail,
@@ -34,7 +34,7 @@ extension SubscribeDataModel{
               title: "2차 iOS 세미나 : AutoLayout, StackView, TabBarController",
               url: "https://www.youtube.com/",
               viewCount: 5123,
-              time: "2021-09-11",
+              time: "2021-09-09 12:00:13",
               youtuber: SOPT),
         
         Video(thumbnailImage: ImageLiterals.Subscribe.Video.thumbnail,
@@ -42,7 +42,7 @@ extension SubscribeDataModel{
               title: "3차 iOS 세미나 : ScrollView, Delegate Pattern, TableView, CollectionView",
               url: "https://www.youtube.com/",
               viewCount: 423,
-              time: "2021-09-18",
+              time: "2021-09-16 12:00:13",
               youtuber: SOPT),
         
         Video(thumbnailImage: ImageLiterals.Subscribe.Video.thumbnail,
@@ -50,7 +50,7 @@ extension SubscribeDataModel{
               title: "4차 iOS 세미나 : Cocoapods & Networking, REST API",
               url: "https://www.youtube.com/",
               viewCount: 423,
-              time: "2021-09-25",
+              time: "2021-09-23 12:00:13",
               youtuber: SOPT),
         
         Video(thumbnailImage: ImageLiterals.Subscribe.Video.thumbnail,
@@ -58,7 +58,7 @@ extension SubscribeDataModel{
               title: "7차 iOS 세미나 : Animation과 제스쳐, 데이터 전달 심화 ",
               url: "https://www.youtube.com/",
               viewCount: 423,
-              time: "2021-10-02",
+              time: "2021-09-30 12:00:13",
               youtuber: SOPT),
         
         Video(thumbnailImage: ImageLiterals.Subscribe.Video.thumbnail,
@@ -66,9 +66,17 @@ extension SubscribeDataModel{
               title: "8차 iOS 세미나 : 8차 세미나 자제휴강하시죠! 엠티가자!",
               url: "https://www.youtube.com/",
               viewCount: 423,
-              time: "2021-10-09",
+              time: "2021-10-05 12:00:13",
               youtuber: SOPT),
       ].sorted(by: { $0.idx < $1.idx })
     }
+  }
+
+
+
+}
+extension SubscribeDataModel.Video: CustomStringConvertible {
+  public var description: String {
+    return "\(youtuber.name) ・ 조회수 \(viewCount)회 ・ \(calculatePastTime(date: time))"
   }
 }
