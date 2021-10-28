@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ListPlaceholder
+import SkeletonView
 
 protocol SubscribeViewControllable : BaseControllable{
   
@@ -28,9 +30,13 @@ class SubscribeVC: UIViewController,SubscribeViewControllable {
   
   
   // MARK: - UI Components
-  
-  @IBOutlet weak var mainNavigationBar: MainHeaderView!
   @IBOutlet weak var videoTV: UITableView!
+  @IBOutlet weak var mainNavigationBar: MainHeaderView!
+  @IBOutlet weak var filterContainerView: SubscribeFilterContainerView!{
+    didSet{
+      filterContainerView.delegate = self
+    }
+  }
   
   
   @IBOutlet weak var navigationBarTopConstraint: NSLayoutConstraint!
@@ -41,10 +47,20 @@ class SubscribeVC: UIViewController,SubscribeViewControllable {
     super.viewDidLoad()
     setTableView()
     setDataSource()
+    showLoader()
   }
-  
+
   
   // MARK: - User Functions Part
+  
+  //샘플로만 Place Holder 만들어서 넣기 , 실제 통신때 확장하기!
+  private func showLoader(){
+    videoTV.showLoader()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) { [weak self] in
+      self?.videoTV.hideLoader()
+    }
+  }
+  
   private func setTableView(){
     videoTV.separatorStyle = .none
     videoTV.contentInset = UIEdgeInsets(top: 196, left: 0, bottom: 0, right: 0)
@@ -100,11 +116,16 @@ extension SubscribeVC{
   }
   
   func setNavibarItemAlpha(alpha: CGFloat){
-      self.mainNavigationBar.mainIconList.forEach {
-        $0.alpha = alpha
+    self.mainNavigationBar.mainIconList.forEach {
+      $0.alpha = alpha
     }
   }
   
 }
 
 
+extension SubscribeVC : SubscribeFilterDelegate{
+  func filterChanged(clickedIdx: Int) {
+    showLoader()
+  }
+}

@@ -17,4 +17,5 @@ target 'sopt_29th_Assignment' do
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
   pod 'SkeletonView'
+  pod 'ListPlaceholder'
 end

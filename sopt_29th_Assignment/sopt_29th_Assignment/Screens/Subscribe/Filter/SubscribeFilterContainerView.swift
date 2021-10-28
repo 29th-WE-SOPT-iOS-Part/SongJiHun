@@ -11,6 +11,7 @@ class SubscribeFilterContainerView: UIView {
 
   // MARK: - Vars & Lets Part
 
+  var delegate : SubscribeFilterDelegate?
   private let filterList = SubscribeDataModel.loadFilterList()
   private var currentDataSource: (UICollectionViewDataSource &
                                   UICollectionViewDelegate &
@@ -23,6 +24,7 @@ class SubscribeFilterContainerView: UIView {
   }
   private var clickedIdx = 0{
     didSet{
+      delegate?.filterChanged(clickedIdx: clickedIdx)
       setDataSource()
     }
   }
@@ -93,4 +95,9 @@ class SubscribeFilterContainerView: UIView {
     guard let idx = filterList.firstIndex(where: { data in data.sortCase == filterName }) else{ return -1 }
     return idx
   }
+}
+
+
+protocol SubscribeFilterDelegate{
+  func filterChanged(clickedIdx :Int)
 }
