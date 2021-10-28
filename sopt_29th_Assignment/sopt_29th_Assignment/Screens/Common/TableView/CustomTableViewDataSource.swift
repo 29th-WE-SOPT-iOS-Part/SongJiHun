@@ -1,5 +1,5 @@
 //
-//  CustomTableDataSource.swift
+//  CustomTableViewDelegate.swift
 //  sopt_29th_Assignment
 //
 //  Created by 송지훈 on 2021/10/28.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class ListDataSource<T>: NSObject, UITableViewDataSource, UITableViewDelegate {
+public class CustomTableViewDataSource<T>: NSObject, UITableViewDataSource, UITableViewDelegate {
   let items: [T]
   let cellFactory: (T) -> UITableViewCell
   public var onItemSelected: (T) -> Void = { _ in }

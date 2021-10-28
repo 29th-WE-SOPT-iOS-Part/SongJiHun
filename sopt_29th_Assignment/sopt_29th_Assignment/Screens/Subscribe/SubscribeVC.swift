@@ -13,6 +13,13 @@ protocol SubscribeViewControllable : BaseControllable{
 
 
 class SubscribeVC: UIViewController,SubscribeViewControllable {
+  
+  // MARK: - Vars & Lets Part
+  
+  
+  
+  
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

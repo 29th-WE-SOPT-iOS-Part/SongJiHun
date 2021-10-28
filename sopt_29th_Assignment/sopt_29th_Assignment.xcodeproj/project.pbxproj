@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D745BC8FFD0438C4A6EABAC4 /* Pods_sopt_29th_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE0ADBE3C1804B8E78D70D9 /* Pods_sopt_29th_Assignment.framework */; };
-		FD081E792729E241001C8FAA /* CustomTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD081E782729E241001C8FAA /* CustomTableDataSource.swift */; };
 		FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B934D27104DC700BE2364 /* makeVibrate.swift */; };
 		FD5B935027104EFD00BE2364 /* applyShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B934F27104EFD00BE2364 /* applyShadow.swift */; };
 		FD5B935227104F4900BE2364 /* calculateTopInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B935127104F4900BE2364 /* calculateTopInset.swift */; };
@@ -35,6 +34,8 @@
 		FD9D4589272A5F78006C108F /* YoutuberDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D4588272A5F78006C108F /* YoutuberDataModel.swift */; };
 		FD9D458B272A5FC8006C108F /* SubscribeFilterList + Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D458A272A5FC8006C108F /* SubscribeFilterList + Load.swift */; };
 		FD9D458D272A6455006C108F /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D458C272A6455006C108F /* VideoDataModel.swift */; };
+		FD9D4590272A6F91006C108F /* CustomTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D458F272A6F91006C108F /* CustomTableViewDataSource.swift */; };
+		FD9D4593272A74AF006C108F /* CustomCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D4592272A74AF006C108F /* CustomCollectionViewDataSource.swift */; };
 		FDCD39E0271C50490072AB10 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39DF271C50490072AB10 /* Presentable.swift */; };
 		FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */; };
 		FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD39E3271C507A0072AB10 /* BaseControllable.swift */; };
@@ -76,7 +77,6 @@
 /* Begin PBXFileReference section */
 		42692C6758410515ECBFA1B7 /* Pods-sopt_29th_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sopt_29th_Assignment.release.xcconfig"; path = "Target Support Files/Pods-sopt_29th_Assignment/Pods-sopt_29th_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		7BA0EBF00B8797B38A1E8890 /* Pods-sopt_29th_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sopt_29th_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-sopt_29th_Assignment/Pods-sopt_29th_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
-		FD081E782729E241001C8FAA /* CustomTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableDataSource.swift; sourceTree = "<group>"; };
 		FD5B934D27104DC700BE2364 /* makeVibrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeVibrate.swift; sourceTree = "<group>"; };
 		FD5B934F27104EFD00BE2364 /* applyShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applyShadow.swift; sourceTree = "<group>"; };
 		FD5B935127104F4900BE2364 /* calculateTopInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateTopInset.swift; sourceTree = "<group>"; };
@@ -101,6 +101,8 @@
 		FD9D4588272A5F78006C108F /* YoutuberDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutuberDataModel.swift; sourceTree = "<group>"; };
 		FD9D458A272A5FC8006C108F /* SubscribeFilterList + Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubscribeFilterList + Load.swift"; sourceTree = "<group>"; };
 		FD9D458C272A6455006C108F /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
+		FD9D458F272A6F91006C108F /* CustomTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewDataSource.swift; sourceTree = "<group>"; };
+		FD9D4592272A74AF006C108F /* CustomCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		FDCD39DF271C50490072AB10 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		FDCD39E1271C50650072AB10 /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
 		FDCD39E3271C507A0072AB10 /* BaseControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControllable.swift; sourceTree = "<group>"; };
@@ -177,6 +179,8 @@
 		FD081E772729E214001C8FAA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D4591272A74A0006C108F /* CollectionView */,
+				FD9D458E272A6F35006C108F /* TableView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -332,6 +336,22 @@
 			path = Subscribe;
 			sourceTree = "<group>";
 		};
+		FD9D458E272A6F35006C108F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D458F272A6F91006C108F /* CustomTableViewDataSource.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FD9D4591272A74A0006C108F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D4592272A74AF006C108F /* CustomCollectionViewDataSource.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		FDCD39DD271C4E7B0072AB10 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,7 +467,6 @@
 			children = (
 				FDCD3A0F271C7CB10072AB10 /* LibraryVC.swift */,
 				FDCD3A1D271C85450072AB10 /* Library.storyboard */,
-				FD081E782729E241001C8FAA /* CustomTableDataSource.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -615,6 +634,7 @@
 				FDCD3A26271C87340072AB10 /* ShortsCoordinator.swift in Sources */,
 				FDCD3A24271C87270072AB10 /* HomeCoordinator.swift in Sources */,
 				FDCD3A0A271C7C2D0072AB10 /* ShortsVC.swift in Sources */,
+				FD9D4593272A74AF006C108F /* CustomCollectionViewDataSource.swift in Sources */,
 				FD5B937E27106CB500BE2364 /* CustomBlueButton.swift in Sources */,
 				FD5B938027106DBD00BE2364 /* ColorLiterals.swift in Sources */,
 				FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */,
@@ -633,6 +653,7 @@
 				FD5B9365271056BE00BE2364 /* ModuleFactory.swift in Sources */,
 				FD5B936927105F7A00BE2364 /* SignInVC.swift in Sources */,
 				FD9D458B272A5FC8006C108F /* SubscribeFilterList + Load.swift in Sources */,
+				FD9D4590272A6F91006C108F /* CustomTableViewDataSource.swift in Sources */,
 				FDCD3A10271C7CB10072AB10 /* LibraryVC.swift in Sources */,
 				FDCD3A08271C7C250072AB10 /* HomeVC.swift in Sources */,
 				FD5B9362271055A100BE2364 /* Storyboards.swift in Sources */,
@@ -644,7 +665,6 @@
 				FD5B935C2710516900BE2364 /* press + UIButton.swift in Sources */,
 				FDCD3A12271C83DD0072AB10 /* UIImage + Extension.swift in Sources */,
 				FDCD39FA271C63A30072AB10 /* SigningCoordinator.swift in Sources */,
-				FD081E792729E241001C8FAA /* CustomTableDataSource.swift in Sources */,
 				FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */,
 				FDCD3A2E271C8DD20072AB10 /* SceneDelegate.swift in Sources */,
 				FD9D458D272A6455006C108F /* VideoDataModel.swift in Sources */,
