@@ -6,13 +6,13 @@
 
 ***
 ![1차 세미나](https://user-images.githubusercontent.com/60260284/136587011-1701c68f-12ce-4b8d-88b5-bcb4190b8e8c.png)
-[1차 과제 리드미 ](https://flaxen-warlock-70e.notion.site/1-03748eccc2e44eab874e905100e362ca)
+[1차 과제 리드미📱 ](https://flaxen-warlock-70e.notion.site/1-03748eccc2e44eab874e905100e362ca)
 <br>
 
 ***
 
 ![2차 세미나](https://user-images.githubusercontent.com/60260284/136587020-fd46204d-513e-4bc1-b2ae-d13ca2b4f03e.png)
-[2차 과제 리드미(공사중)](https://flaxen-warlock-70e.notion.site/2-e5e1f35a4f96469da8938902c15df831)
+[2차 과제 리드미📐(공사중)](https://flaxen-warlock-70e.notion.site/2-e5e1f35a4f96469da8938902c15df831)
 
 <br>
 
