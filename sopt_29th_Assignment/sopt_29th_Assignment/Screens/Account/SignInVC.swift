@@ -84,26 +84,27 @@ class SignInVC: UIViewController,SignInViewControllerable {
     }
     
     loginButton.press { [weak self] in
-      if let name = self?.nameTextField.text,
-         let email = self?.emailTextField.text,
+         if let email = self?.emailTextField.text,
          let password = self?.passwordTextField.text{
+        print(email,password)
         BaseService.default.postUserSignIn(email: email, password: password) { [weak self] result in
           result.success { data in
-            self?.onSigninComplete?(name)
-            
+            if let userName = data?.userData?.name{
+              UserDefaults.standard.setValue(userName, forKey: "userName")
+              self?.onSigninComplete?(userName)
+            }
           }.catch { error in
             if let error = error as? MoyaError,
                let statusCode = error.response?.statusCode,
                statusCode == 400 {
-              self?.makeAlert(title: I18N.Alert.error, message: JSON(error.response?.data)["message"] as! String)
+              self?.makeAlert(title: I18N.Alert.error, message: JSON(error.response?.data)["message"].stringValue)
+            }else{
               self?.showNetworkErrorAlert()
             }
           }
           
         }
       }
-      
-      
     }
   }
   

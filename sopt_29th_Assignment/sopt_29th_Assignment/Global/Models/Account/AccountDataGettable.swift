@@ -11,7 +11,7 @@ struct AccountDataGettable: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: UserData?
+    let userData: UserData?
 }
 
 // MARK: - DataClass

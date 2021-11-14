@@ -12,7 +12,7 @@ struct I18N{
   
   struct Alert{
     static let alarm = "알림"
-    static let error = "에러"
+    static let error = "오류"
     static let networkError = "네트워크 상태를 확인해주세요"
   }
   

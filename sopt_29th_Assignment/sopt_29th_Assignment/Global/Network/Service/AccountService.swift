@@ -20,6 +20,7 @@ extension BaseService : AccountServiceType{
   }
   
   func postUserSignUp(email: String, password: String, name: String, completion: @escaping (Result<AccountDataGettable?, Error>) -> Void) {
+    print(email,password,name)
     requestObject(.postSignUp(email: email, pw: password, name: name), completion: completion)
   }
   

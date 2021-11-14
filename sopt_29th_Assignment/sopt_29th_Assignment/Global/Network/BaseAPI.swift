@@ -45,7 +45,7 @@ extension BaseAPI: TargetType {
       case .postSignIn:
         return "/login"
       case .postSignUp:
-        return "/signin"
+        return "/signup"
       default :
         return ""
     }
@@ -123,8 +123,7 @@ extension BaseAPI: TargetType {
   
   var task: Task {
     switch self{
-      case .sampleAPI
-           :
+      case .sampleAPI:
         return .uploadMultipart(multiparts)
         
       case .postSignIn,.postSignUp:
