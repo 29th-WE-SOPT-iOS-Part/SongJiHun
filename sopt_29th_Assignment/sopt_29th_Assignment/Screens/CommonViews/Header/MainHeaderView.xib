@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,10 +43,24 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="ic_airplay"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLJ-5f-J0z">
+                    <rect key="frame" x="417" y="30.5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="AbK-4X-LWw"/>
+                        <constraint firstAttribute="height" constant="30" id="YA5-vI-7FO"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="profileButtonClicked:" destination="-1" eventType="touchUpInside" id="FEU-Ic-gb4"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="qcx-wK-V9k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AC8-TW-fNi"/>
+                <constraint firstAttribute="trailing" secondItem="vLJ-5f-J0z" secondAttribute="trailing" constant="10" id="B3U-QR-ah6"/>
+                <constraint firstItem="vLJ-5f-J0z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Cod-7T-sJS"/>
                 <constraint firstItem="Ydp-3V-553" firstAttribute="leading" secondItem="QfP-81-nHr" secondAttribute="trailing" constant="12" id="Dz3-2M-Xq3"/>
                 <constraint firstItem="Ydp-3V-553" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="EzP-Qs-hqp"/>
                 <constraint firstItem="wO8-ZT-0Ts" firstAttribute="leading" secondItem="qcx-wK-V9k" secondAttribute="trailing" constant="17" id="YIR-6B-CWL"/>

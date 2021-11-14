@@ -9,6 +9,8 @@ import UIKit
 
 class MainHeaderView : UIView{
   
+  var delegate : MainHeaderDelegate?
+  
   @IBOutlet var mainIconList: [UIView]!
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -20,4 +22,13 @@ class MainHeaderView : UIView{
     addSubviewFromNib(view: self)
   }
   
+  @IBAction func profileButtonClicked(_ sender: Any) {
+    delegate?.profileButtonClicked()
+  }
+}
+
+
+
+protocol MainHeaderDelegate{
+  func profileButtonClicked()
 }

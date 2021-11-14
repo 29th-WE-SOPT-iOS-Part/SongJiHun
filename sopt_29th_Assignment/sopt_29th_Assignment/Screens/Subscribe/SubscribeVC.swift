@@ -31,7 +31,11 @@ class SubscribeVC: UIViewController,SubscribeViewControllable {
   
   // MARK: - UI Components
   @IBOutlet weak var videoTV: UITableView!
-  @IBOutlet weak var mainNavigationBar: MainHeaderView!
+  @IBOutlet weak var mainNavigationBar: MainHeaderView!{
+    didSet{
+      mainNavigationBar.delegate = self
+    }
+  }
   @IBOutlet weak var filterContainerView: SubscribeFilterContainerView!{
     didSet{
       filterContainerView.delegate = self
@@ -128,4 +132,12 @@ extension SubscribeVC : SubscribeFilterDelegate{
   func filterChanged(clickedIdx: Int) {
     showLoader()
   }
+}
+
+
+extension SubscribeVC : MainHeaderDelegate{
+  func profileButtonClicked() {
+    
+  }
+  
 }
