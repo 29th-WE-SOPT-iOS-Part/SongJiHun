@@ -19,6 +19,8 @@ class MainTabCoordinator : BaseCoordinator, CoordinatorFinishOutput{
   private let coordinatorFactory: CoordinatorFactoryProtocol
   private let moduleFactory: ModuleFactoryProtocol
   private var mainTabController: MainTabBarControllable?
+  private var launchInstructor = LaunchInstructor.configure()
+
   
   // MARK: - Init
   init(
@@ -51,6 +53,9 @@ class MainTabCoordinator : BaseCoordinator, CoordinatorFinishOutput{
 extension MainTabCoordinator {
   private func showMainTabBarController() {
     self.mainTabController = self.moduleFactory.instantiateMainTabBarController()
+    self.mainTabController?.showSigningScene = { [weak self] in
+      self?.runSigningScene()
+    }
     self.mainTabController?.onHomeScene = runHomeScene()
     self.mainTabController?.onShortScene = runShortScene()
     self.mainTabController?.onWritingScene = runWritingScene()
@@ -134,6 +139,20 @@ extension MainTabCoordinator {
         coordinator.start()
       }
     }
+  }
+  private func runSigningScene() {
+    var coordinator = self.coordinatorFactory.makeSigningCoordinator(
+      router: self.router,
+      coordinatorFactory: self.coordinatorFactory,
+      moduleFactory: self.moduleFactory)
+    coordinator.finishScene = { [unowned self, unowned coordinator] in
+      self.launchInstructor = LaunchInstructor.configure(Logged.wasLoggedIn)
+      self.removeDependency(coordinator)
+      self.start()
+    }
+    
+    self.addDependency(coordinator)
+    coordinator.start()
   }
 }
 

@@ -88,6 +88,12 @@
 		FDCD3A2E271C8DD20072AB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A2D271C8DD20072AB10 /* SceneDelegate.swift */; };
 		FDCD3A30271CAFD60072AB10 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A2F271CAFD60072AB10 /* MainNavigationController.swift */; };
 		FDCD3A32271CB03E0072AB10 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */; };
+		FDCDE61C274143BD00B2F413 /* AccountNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE61B274143BD00B2F413 /* AccountNC.swift */; };
+		FDCDE61F27414FF600B2F413 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE61E27414FF600B2F413 /* BaseAPI.swift */; };
+		FDCDE62127414FFD00B2F413 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE62027414FFD00B2F413 /* Config.swift */; };
+		FDCDE6242741528900B2F413 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE6232741528900B2F413 /* BaseService.swift */; };
+		FDCDE6262741529F00B2F413 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE6252741529F00B2F413 /* AccountService.swift */; };
+		FDCDE6292741531700B2F413 /* AccountDataGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE6282741531700B2F413 /* AccountDataGettable.swift */; };
 		FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */; };
 		FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BC270AB1BC0099F245 /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -173,6 +179,12 @@
 		FDCD3A2D271C8DD20072AB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FDCD3A2F271CAFD60072AB10 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		FDCDE61B274143BD00B2F413 /* AccountNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNC.swift; sourceTree = "<group>"; };
+		FDCDE61E27414FF600B2F413 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		FDCDE62027414FFD00B2F413 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FDCDE6232741528900B2F413 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		FDCDE6252741529F00B2F413 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		FDCDE6282741531700B2F413 /* AccountDataGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataGettable.swift; sourceTree = "<group>"; };
 		FDD7A6B5270AB1BC0099F245 /* sopt_29th_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sopt_29th_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7A6BC270AB1BC0099F245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +243,7 @@
 		FD5B934927104B5E00BE2364 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				FDCDE61D27414FE400B2F413 /* Network */,
 				FD9D45A1272AA4F1006C108F /* Protocols */,
 				FD9D4581272A5E60006C108F /* Models */,
 				FD5B93752710637E00BE2364 /* UIComponents */,
@@ -334,6 +347,7 @@
 				FD5B936827105F7A00BE2364 /* SignInVC.swift */,
 				FD5B936A27105F8900BE2364 /* SignUpVC.swift */,
 				FD5B936C27105F9300BE2364 /* SignUpCompleteVC.swift */,
+				FDCDE61B274143BD00B2F413 /* AccountNC.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -352,6 +366,7 @@
 		FD9D4581272A5E60006C108F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDCDE6272741530600B2F413 /* Account */,
 				FD9D4585272A5F5D006C108F /* Subscribe */,
 			);
 			path = Models;
@@ -565,6 +580,33 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		FDCDE61D27414FE400B2F413 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDE6222741528000B2F413 /* Service */,
+				FDCDE61E27414FF600B2F413 /* BaseAPI.swift */,
+				FDCDE62027414FFD00B2F413 /* Config.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FDCDE6222741528000B2F413 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDE6232741528900B2F413 /* BaseService.swift */,
+				FDCDE6252741529F00B2F413 /* AccountService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FDCDE6272741530600B2F413 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDE6282741531700B2F413 /* AccountDataGettable.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		FDD7A6AC270AB1BC0099F245 = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +763,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDE6292741531700B2F413 /* AccountDataGettable.swift in Sources */,
 				FD5B936D27105F9300BE2364 /* SignUpCompleteVC.swift in Sources */,
 				FD5B936B27105F8900BE2364 /* SignUpVC.swift in Sources */,
 				FDCD3A2C271C87580072AB10 /* LibraryCoordinator.swift in Sources */,
@@ -738,6 +781,7 @@
 				FDCD3A0A271C7C2D0072AB10 /* ShortsVC.swift in Sources */,
 				FD9D4593272A74AF006C108F /* CustomCollectionViewDataSource.swift in Sources */,
 				FD5B937E27106CB500BE2364 /* CustomBlueButton.swift in Sources */,
+				FDCDE62127414FFD00B2F413 /* Config.swift in Sources */,
 				FD5B938027106DBD00BE2364 /* ColorLiterals.swift in Sources */,
 				FDCD39E2271C50650072AB10 /* CoordinatorFinishOutput.swift in Sources */,
 				FDCD39FE271C773B0072AB10 /* MainTabCoordinator.swift in Sources */,
@@ -757,6 +801,7 @@
 				FD9D45C4272AC726006C108F /* SubscribeVC + UIScrollViewDelegate.swift in Sources */,
 				FDCD3A0E271C7C430072AB10 /* SubscribeVC.swift in Sources */,
 				FD5B935227104F4900BE2364 /* calculateTopInset.swift in Sources */,
+				FDCDE61C274143BD00B2F413 /* AccountNC.swift in Sources */,
 				FD5B9365271056BE00BE2364 /* ModuleFactory.swift in Sources */,
 				FD5B936927105F7A00BE2364 /* SignInVC.swift in Sources */,
 				FD9D458B272A5FC8006C108F /* SubscribeFilterList + Load.swift in Sources */,
@@ -764,6 +809,7 @@
 				FDCD3A10271C7CB10072AB10 /* LibraryVC.swift in Sources */,
 				FDCD3A08271C7C250072AB10 /* HomeVC.swift in Sources */,
 				FD5B9362271055A100BE2364 /* Storyboards.swift in Sources */,
+				FDCDE6262741529F00B2F413 /* AccountService.swift in Sources */,
 				FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */,
 				FD9D4589272A5F78006C108F /* YoutuberDataModel.swift in Sources */,
 				FD9D45AA272AAC2D006C108F /* MainHeaderView.swift in Sources */,
@@ -774,6 +820,7 @@
 				FDCD3A12271C83DD0072AB10 /* UIImage + Extension.swift in Sources */,
 				FDCD39FA271C63A30072AB10 /* SigningCoordinator.swift in Sources */,
 				FD5B934E27104DC700BE2364 /* makeVibrate.swift in Sources */,
+				FDCDE61F27414FF600B2F413 /* BaseAPI.swift in Sources */,
 				FDCD3A2E271C8DD20072AB10 /* SceneDelegate.swift in Sources */,
 				FD9D458D272A6455006C108F /* VideoDataModel.swift in Sources */,
 				FD9D45BC272ABDD5006C108F /* SubscribeFilterContainerView.swift in Sources */,
@@ -783,6 +830,7 @@
 				FD9D4587272A5F69006C108F /* SubscribeDataModel.swift in Sources */,
 				FD5B93872710841B00BE2364 /* addToolbar.swift in Sources */,
 				FD9D45A0272A97C0006C108F /* calculateDate.swift in Sources */,
+				FDCDE6242741528900B2F413 /* BaseService.swift in Sources */,
 				FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */,
 				FDCD3A28271C873C0072AB10 /* WritingCoordinator.swift in Sources */,
 				FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */,
