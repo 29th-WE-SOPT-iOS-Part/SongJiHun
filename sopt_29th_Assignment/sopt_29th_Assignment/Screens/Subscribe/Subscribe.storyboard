@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,24 +17,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnM-v4-687">
-                                <rect key="frame" x="168.5" y="437.5" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzn-yt-bEj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc2-rr-37e" customClass="SubscribeYoutuberContainerView" customModule="sopt_29th_Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="104"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="PJE-3G-Mdz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICR-bc-TcT" customClass="SubscribeFilterContainerView" customModule="sopt_29th_Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="192" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dfT-so-Y0D"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWA-hb-QS3" customClass="MainHeaderView" customModule="sopt_29th_Assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xgJ-le-juh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQR-eA-mgx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.4907634909060562" green="1" blue="0.89317830485280625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VnM-v4-687" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="NgW-9c-r1l"/>
-                            <constraint firstItem="VnM-v4-687" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rAS-zh-6cc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ICR-bc-TcT" secondAttribute="trailing" id="01n-a5-eQx"/>
+                            <constraint firstAttribute="bottom" secondItem="jzn-yt-bEj" secondAttribute="bottom" id="0oW-aX-hzG"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="top" secondItem="aQR-eA-mgx" secondAttribute="bottom" id="3gr-we-bq4"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="66d-C7-jeJ"/>
+                            <constraint firstAttribute="trailing" secondItem="aQR-eA-mgx" secondAttribute="trailing" id="6Kh-TV-9sh"/>
+                            <constraint firstItem="kc2-rr-37e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8BH-xY-gPH"/>
+                            <constraint firstItem="aQR-eA-mgx" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="9L7-oc-mLI"/>
+                            <constraint firstItem="aQR-eA-mgx" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Cih-5p-UcX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wWA-hb-QS3" secondAttribute="trailing" id="Pe6-cf-rgv"/>
+                            <constraint firstItem="wWA-hb-QS3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TTv-oI-tmW"/>
+                            <constraint firstItem="ICR-bc-TcT" firstAttribute="top" secondItem="kc2-rr-37e" secondAttribute="bottom" id="Ztt-EE-ZjW"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ccG-rJ-JbG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kc2-rr-37e" secondAttribute="trailing" id="cfP-fd-zr5"/>
+                            <constraint firstItem="wWA-hb-QS3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jep-Qf-Pcq"/>
+                            <constraint firstItem="kc2-rr-37e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="44" id="piH-VF-rKU"/>
+                            <constraint firstItem="ICR-bc-TcT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vdt-Mc-wfX"/>
+                            <constraint firstItem="jzn-yt-bEj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ysQ-wJ-7sC"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="filterContainerView" destination="ICR-bc-TcT" id="MAQ-Nn-ext"/>
+                        <outlet property="headerCellTopConstraint" destination="piH-VF-rKU" id="PNw-9b-79d"/>
+                        <outlet property="mainNavigationBar" destination="wWA-hb-QS3" id="exr-8m-FsF"/>
+                        <outlet property="navigationBarTopConstraint" destination="TTv-oI-tmW" id="xPa-cc-T6N"/>
+                        <outlet property="videoTV" destination="jzn-yt-bEj" id="ZSI-Fh-ETw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

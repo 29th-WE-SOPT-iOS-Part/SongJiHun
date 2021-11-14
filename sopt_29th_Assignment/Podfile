@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'sopt_29th_Assignment' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for sopt_29th_Assignment
+    pod 'SnapKit', '~> 5.0.0'
+  pod 'Alamofire', '~> 5.1' 
+  pod 'lottie-ios'
+  pod 'Kingfisher', '~> 5.0'
+  pod 'Alamofire', '~> 5.1' 
+  pod 'Then'
+  pod 'Moya', '~> 14.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+  pod 'SkeletonView'
+  pod 'ListPlaceholder'
+end

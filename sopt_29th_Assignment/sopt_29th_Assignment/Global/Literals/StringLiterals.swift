@@ -13,6 +13,7 @@ struct I18N{
   struct Components{
     static let next = "다음"
     static let ok = "확인"
+    static let total = "전체"
   }
   
   
@@ -28,5 +29,16 @@ struct I18N{
     static let add = "추가"
     static let subscribe = "구독"
     static let library = "보관함"
+  }
+  
+  struct Subscribe{
+    struct Filter{
+      static let total = "전체"
+      static let today = "오늘"
+      static let continueToWatch = "이어서 시청하기"
+      static let noWatch = "시청하지 않음"
+      static let live = "실시간"
+      static let article = "게시물"
+    }
   }
 }
