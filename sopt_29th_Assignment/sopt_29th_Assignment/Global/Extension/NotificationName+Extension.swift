@@ -11,5 +11,6 @@ import Foundation
 extension Notification.Name {
   // MARK: - Tab Bar
   static let selectTab = Notification.Name("selectTab")
+  static let showLoginScene = Notification.Name("showLoginScene")
   
 }

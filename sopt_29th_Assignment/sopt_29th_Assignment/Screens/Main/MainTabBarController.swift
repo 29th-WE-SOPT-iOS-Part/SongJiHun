@@ -10,6 +10,7 @@ import UIKit
 protocol MainTabBarControllable: BaseControllable {
   func selectTab(_ index: Int)
   
+  var showSigningScene: (() -> Void)? { get set }
   var onHomeScene: Scene? { get set }
   var onShortScene: Scene? { get set }
   var onWritingScene: Scene? { get set }
@@ -19,6 +20,7 @@ protocol MainTabBarControllable: BaseControllable {
 
 class MainTabBarController: UITabBarController,MainTabBarControllable {
   
+  var showSigningScene: (() -> Void)?
   var onHomeScene: Scene?
   var onShortScene: Scene?
   var onWritingScene: Scene?
@@ -30,6 +32,7 @@ class MainTabBarController: UITabBarController,MainTabBarControllable {
     self.setupTabBar()
     delegate = self
     NotificationCenter.default.addObserver(self, selector: #selector(selectTab(notification:)), name: .selectTab, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(showSigningView), name: .showLoginScene, object: nil)
   }
   
   deinit {
@@ -107,6 +110,9 @@ extension MainTabBarController {
     if let controller = self.viewControllers?[index] {
       self.tabBarController(self, didSelect: controller)
     }
+  }
+  @objc private func showSigningView(){
+    self.showSigningScene?()
   }
 }
 extension MainTabBarController: UITabBarControllerDelegate {

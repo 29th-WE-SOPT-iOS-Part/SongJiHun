@@ -16,6 +16,7 @@ class SubscribeCoordinator: BaseCoordinator, CoordinatorFinishOutput {
   private let router: RouterProtocol
   private let coordinatorFactory: CoordinatorFactoryProtocol
   private let moduleFactory: ModuleFactoryProtocol
+  private var launchInstructor = LaunchInstructor.configure()
   
   // MARK: - Init
   init(
@@ -38,6 +39,10 @@ class SubscribeCoordinator: BaseCoordinator, CoordinatorFinishOutput {
 extension SubscribeCoordinator {
   private func showSubscribeVC() {
     let vc = moduleFactory.instantitateSubscribeVC()
+    vc.onLoginButtonClicked = { [weak self] in
+      NotificationCenter.default.post(name: .showLoginScene, object: nil)
+    }
     self.router.setRootModule(vc)
   }
 }
+

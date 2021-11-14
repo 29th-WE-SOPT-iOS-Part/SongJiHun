@@ -10,6 +10,12 @@ import Foundation
 
 struct I18N{
   
+  struct Alert{
+    static let alarm = "알림"
+    static let error = "오류"
+    static let networkError = "네트워크 상태를 확인해주세요"
+  }
+  
   struct Components{
     static let next = "다음"
     static let ok = "확인"

@@ -10,13 +10,14 @@ import ListPlaceholder
 import SkeletonView
 
 protocol SubscribeViewControllable : BaseControllable{
-  
+  var onLoginButtonClicked: (() -> Void)? { get set }
 }
-
 
 class SubscribeVC: UIViewController,SubscribeViewControllable {
   
   // MARK: - Vars & Lets Part
+  
+  var onLoginButtonClicked: (() -> Void)?
   
   private var lastPosY :CGFloat = 0
   private let dummyVideoData = SubscribeDataModel.Video.loadDummyList()
@@ -27,8 +28,7 @@ class SubscribeVC: UIViewController,SubscribeViewControllable {
       self.videoTV.reloadData()
     }
   }
-  
-  
+
   // MARK: - UI Components
   @IBOutlet weak var videoTV: UITableView!
   @IBOutlet weak var mainNavigationBar: MainHeaderView!{
@@ -137,7 +137,7 @@ extension SubscribeVC : SubscribeFilterDelegate{
 
 extension SubscribeVC : MainHeaderDelegate{
   func profileButtonClicked() {
-    
+    onLoginButtonClicked?()
   }
   
 }

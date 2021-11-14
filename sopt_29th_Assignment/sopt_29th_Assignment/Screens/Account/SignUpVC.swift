@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Moya
+import SwiftyJSON
 
 protocol SignUpViewControllerable: BaseControllable {
   var onBack: (() -> Void)? { get set }
@@ -86,13 +88,33 @@ class SignUpVC: UIViewController,SignUpViewControllerable {
     nameTextField.textDelegate = self
     emailTextField.textDelegate = self
     passwordTextField.textDelegate = self
-
+    
   }
   
   private func setButtonActions(){
     signupButton.press { [weak self] in
-      if let name = self?.nameTextField.text{
-        self?.onSignupComplete?(name)
+      
+      if let email = self?.emailTextField.text,
+         let password = self?.passwordTextField.text,
+         let name = self?.nameTextField.text{
+        print(email,password)
+        BaseService.default.postUserSignUp(email: email, password: password, name: name) { [weak self] result in
+          result.success { data in
+            if let userName = data?.userData?.name{
+              self?.onSignupComplete?(userName)
+            }
+          }.catch { error in
+            dump(error)
+            if let error = error as? MoyaError,
+               let statusCode = error.response?.statusCode,
+               statusCode == 400 {
+              self?.makeAlert(title: I18N.Alert.error, message: JSON(error.response?.data)["message"].stringValue)
+            }else{
+              self?.showNetworkErrorAlert()
+            }
+          }
+          
+        }
       }
     }
   }
@@ -103,7 +125,7 @@ class SignUpVC: UIViewController,SignUpViewControllerable {
     ImageLiterals.Components.checkBox_unactivated
   }
   
-
+  
   
   
   
@@ -155,7 +177,7 @@ extension SignUpVC : CustomInputTextFieldDelegate{
 
 // 키보드 액션 부분
 extension SignUpVC{
- 
+  
   
   private func registerForKeyboardNotifications() {
     NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -174,7 +196,7 @@ extension SignUpVC{
     self.headerViewTopConstraint.constant = -100
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve)) {
       self.headerView.alpha = 0
-       
+      
       self.view.layoutIfNeeded()
     }
   }
@@ -182,7 +204,7 @@ extension SignUpVC{
   @objc private func keyboardWillHide(_ notification: Notification) {
     let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
     let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
-
+    
     self.headerViewTopConstraint.constant = 30
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve)) {
       self.headerView.alpha = 1
