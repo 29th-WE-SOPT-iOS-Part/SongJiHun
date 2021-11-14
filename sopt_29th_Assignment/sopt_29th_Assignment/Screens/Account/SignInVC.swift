@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Moya
+import SwiftyJSON
+
 
 protocol SignInViewControllerable: BaseControllable {
   var onSignUpSelect: (() -> Void)? { get set }
@@ -81,11 +84,29 @@ class SignInVC: UIViewController,SignInViewControllerable {
     }
     
     loginButton.press { [weak self] in
-      if let name = self?.nameTextField.text{
-        self?.onSigninComplete?(name)
+      if let name = self?.nameTextField.text,
+         let email = self?.emailTextField.text,
+         let password = self?.passwordTextField.text{
+        BaseService.default.postUserSignIn(email: email, password: password) { [weak self] result in
+          result.success { data in
+            self?.onSigninComplete?(name)
+            
+          }.catch { error in
+            if let error = error as? MoyaError,
+               let statusCode = error.response?.statusCode,
+               statusCode == 400 {
+              self?.makeAlert(title: I18N.Alert.error, message: JSON(error.response?.data)["message"] as! String)
+              self?.showNetworkErrorAlert()
+            }
+          }
+          
+        }
       }
+      
+      
     }
   }
+  
   
   
   // MARK: - Function Part
@@ -143,7 +164,7 @@ extension SignInVC : CustomInputTextFieldDelegate{
 
 // 키보드 액션 부분
 extension SignInVC{
- 
+  
   
   private func registerForKeyboardNotifications() {
     NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -163,7 +184,7 @@ extension SignInVC{
     self.headerViewTopConstraint.constant = -100
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve)) {
       self.headerView.alpha = 0
-       
+      
       self.view.layoutIfNeeded()
     }
   }
@@ -171,7 +192,7 @@ extension SignInVC{
   @objc private func keyboardWillHide(_ notification: Notification) {
     let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
     let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
-
+    
     self.headerViewTopConstraint.constant = 30
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve)) {
       self.headerView.alpha = 1

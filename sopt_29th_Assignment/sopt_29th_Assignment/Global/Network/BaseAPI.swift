@@ -43,7 +43,7 @@ extension BaseAPI: TargetType {
       case .sampleAPI:
         return "뒤에붙는 주소"
       case .postSignIn:
-        return "/signin"
+        return "/login"
       case .postSignUp:
         return "/signin"
       default :

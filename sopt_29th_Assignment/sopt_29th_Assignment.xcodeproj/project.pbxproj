@@ -94,6 +94,8 @@
 		FDCDE6242741528900B2F413 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE6232741528900B2F413 /* BaseService.swift */; };
 		FDCDE6262741529F00B2F413 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE6252741529F00B2F413 /* AccountService.swift */; };
 		FDCDE6292741531700B2F413 /* AccountDataGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE6282741531700B2F413 /* AccountDataGettable.swift */; };
+		FDCDE62B2741559D00B2F413 /* NetworkResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE62A2741559D00B2F413 /* NetworkResultExtension.swift */; };
+		FDCDE62E27415A6000B2F413 /* showNetworkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDE62D27415A6000B2F413 /* showNetworkAlert.swift */; };
 		FDD7A6B9270AB1BC0099F245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */; };
 		FDD7A6BD270AB1BC0099F245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7A6BC270AB1BC0099F245 /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -185,6 +187,8 @@
 		FDCDE6232741528900B2F413 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		FDCDE6252741529F00B2F413 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FDCDE6282741531700B2F413 /* AccountDataGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataGettable.swift; sourceTree = "<group>"; };
+		FDCDE62A2741559D00B2F413 /* NetworkResultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResultExtension.swift; sourceTree = "<group>"; };
+		FDCDE62D27415A6000B2F413 /* showNetworkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showNetworkAlert.swift; sourceTree = "<group>"; };
 		FDD7A6B5270AB1BC0099F245 /* sopt_29th_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sopt_29th_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7A6B8270AB1BC0099F245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7A6BC270AB1BC0099F245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				FD5B93862710841B00BE2364 /* addToolbar.swift */,
 				FDCD39FB271C6B260072AB10 /* Logged + UserDefaults.swift */,
 				FD9D459F272A97C0006C108F /* calculateDate.swift */,
+				FDCDE62D27415A6000B2F413 /* showNetworkAlert.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				FDCD3A13271C84B70072AB10 /* NotificationName+Extension.swift */,
 				FDCD3A31271CB03E0072AB10 /* UIColor + Extension.swift */,
 				FD9D45B7272AB73F006C108F /* addSubViewFromNib.swift */,
+				FDCDE62A2741559D00B2F413 /* NetworkResultExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 				FD9D4589272A5F78006C108F /* YoutuberDataModel.swift in Sources */,
 				FD9D45AA272AAC2D006C108F /* MainHeaderView.swift in Sources */,
 				FD5B937C271067E300BE2364 /* addPadding + UITextField.swift in Sources */,
+				FDCDE62E27415A6000B2F413 /* showNetworkAlert.swift in Sources */,
 				FDCD3A32271CB03E0072AB10 /* UIColor + Extension.swift in Sources */,
 				FD5B935F2710557200BE2364 /* controllerFromStoryboard + UIViewController.swift in Sources */,
 				FD5B935C2710516900BE2364 /* press + UIButton.swift in Sources */,
@@ -834,6 +841,7 @@
 				FDCD39E4271C507A0072AB10 /* BaseControllable.swift in Sources */,
 				FDCD3A28271C873C0072AB10 /* WritingCoordinator.swift in Sources */,
 				FD5B938527107DD000BE2364 /* ImageLiterals.swift in Sources */,
+				FDCDE62B2741559D00B2F413 /* NetworkResultExtension.swift in Sources */,
 				FDCD39FC271C6B260072AB10 /* Logged + UserDefaults.swift in Sources */,
 				FD5B935A2710508D00BE2364 /* makeAlert + UIViewController.swift in Sources */,
 			);
